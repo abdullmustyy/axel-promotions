@@ -1,4 +1,4 @@
-import { Inter, Luxurious_Script, Poppins } from "next/font/google";
+import { Inter, Luxurious_Script, Poppins, Urbanist } from "next/font/google";
 import localFont from "next/font/local";
 
 export const aeonikTrial = localFont({
@@ -53,4 +53,9 @@ export const poppins = Poppins({
     subsets: ["latin"],
     weight: ["400", "500", "600"],
     variable: "--font-poppins",
+});
+
+export const urbanist = Urbanist({
+    subsets: ["latin"],
+    variable: "--font-urbanist",
 });

@@ -40,12 +40,13 @@
   --font-inter: var(--font-inter);
   --font-luxurious-script: var(--font-luxurious-script);
   --font-poppins: var(--font-poppins);
+  --font-urbanist: var(--font-urbanist);
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --radius-xxl: calc(var(--radius) * 5);
+  --radius-xxl: 20px;
 }
 
 :root {

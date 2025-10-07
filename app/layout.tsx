@@ -1,7 +1,13 @@
 import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { aeonikTrial, inter, luxuriousScript, poppins } from "./fonts";
+import {
+    aeonikTrial,
+    inter,
+    luxuriousScript,
+    poppins,
+    urbanist,
+} from "./fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -22,6 +28,7 @@ export default function RootLayout({
                     inter.variable,
                     luxuriousScript.variable,
                     poppins.variable,
+                    urbanist.variable,
                 )}
             >
                 <Navbar />

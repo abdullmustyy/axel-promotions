@@ -14,11 +14,11 @@ const Navbar = () => {
 
     return (
         <nav className="container h-20 flex items-center justify-between">
-            <figure>
+            <Link href="/">
                 <Image src={Logo} alt="" className="size-full object-cover" />
-            </figure>
+            </Link>
 
-            <ul className="flex items-center gap-15">
+            <ul className="md:flex hidden items-center gap-15">
                 {navItems.map((item, index) => (
                     <li key={item.name + index} className="group relative">
                         {item.type === "link" ? (
@@ -62,7 +62,10 @@ const Navbar = () => {
                 ))}
             </ul>
 
-            <Link href="" className={cn(buttonVariants(), "rounded-full")}>
+            <Link
+                href=""
+                className={cn(buttonVariants(), "md:inline-flex hidden rounded-full py-2.5")}
+            >
                 Contact
             </Link>
         </nav>
