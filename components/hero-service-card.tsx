@@ -22,7 +22,7 @@ const HeroServiceCard = ({
             <div className="md:size-12 size-7.5 grid place-content-center bg-primary rounded-full">
                 <Image src={InboxImg} alt="" className="md:size-5 size-3" />
             </div>
-            <div className="md:space-y-2 space-y-1 font-urbanist">
+            <div className="space-y-1 font-urbanist">
                 <h6 className="font-semibold md:text-lg text-xs text-primary">
                     {heading}
                 </h6>
