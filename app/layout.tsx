@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { aeonikTrial, inter, luxuriousScript, poppins } from "./fonts";
@@ -23,6 +24,7 @@ export default function RootLayout({
                     poppins.variable,
                 )}
             >
+                <Navbar />
                 {children}
             </body>
         </html>
