@@ -1,5 +1,6 @@
 import HeroServiceCard from "@/components/hero-service-card";
 import { buttonVariants } from "@/components/ui/button";
+import { brands } from "@/lib/data/home";
 import { cn } from "@/lib/utils";
 import HeroImg from "@/public/images/pngs/home-hero-img.png";
 import TakeOffImg from "@/public/images/svgs/takeoff.svg";
@@ -8,8 +9,9 @@ import Link from "next/link";
 
 export default function Home() {
     return (
-        <main className="container pt-5 pb-15">
-            <header className="flex md:flex-row flex-col md:items-end md:gap-0 gap-12.5">
+        <main>
+            {/* ---------------------  Hero  --------------------- */}
+            <header className="container pt-5 pb-30 flex md:flex-row flex-col md:items-end md:gap-0 gap-12.5">
                 <div className="md:w-1/2 flex flex-col md:gap-18.5 gap-12.5 md:text-left text-center">
                     <div className="md:space-y-7.5 space-y-2.5">
                         <h2 className="font-poppins font-medium md:text-[4rem] text-3xl md:leading-[70px] leading-[50px]">
@@ -61,6 +63,24 @@ export default function Home() {
                     </div>
                 </div>
             </header>
+
+            {/* ---------------------  Join the brands  --------------------- */}
+            <section className="container space-y-6">
+                <p className="text-2xl text-[#F58B3B] font-medium font-poppins text-center">
+                    Join the brands who are scaling with Axel Promotions
+                </p>
+
+                <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 items-center justify-items-center md:gap-8 gap-10">
+                    {brands.map((logo, index) => (
+                        <Image
+                            key={index}
+                            src={logo}
+                            alt=""
+                            className="md:last:col-span-1 last:col-span-2"
+                        />
+                    ))}
+                </div>
+            </section>
         </main>
     );
 }
