@@ -7,7 +7,6 @@ import { brands, ourBenefits } from "@/lib/data/home";
 import { cn } from "@/lib/utils";
 import HeroImg from "@/public/images/pngs/home-hero-img.png";
 import TakeOffImg from "@/public/images/svgs/takeoff.svg";
-import { Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 

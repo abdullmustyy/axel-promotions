@@ -42,10 +42,10 @@ const TestimonialCorousel = ({
                                         us a boost. But in our very first
                                         strategy call, they made it clear: the
                                         problem wasn&apos;t just our visuals —
-                                        it was the full funnel."
+                                        it was the full funnel.&quot;
                                     </p>
                                     <p>
-                                        "They did a full audit of our brand
+                                        &quot;They did a full audit of our brand
                                         messaging, offer positioning, customer
                                         journey, and even backend email flows.
                                     </p>
