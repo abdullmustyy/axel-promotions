@@ -10,6 +10,7 @@ import {
     urbanist,
 } from "./fonts";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
     title: "Axel Promotions",
@@ -35,6 +36,7 @@ export default function RootLayout({
                 <Navbar />
                 {children}
                 <Newsletter />
+                <Footer />
             </body>
         </html>
     );

@@ -70,3 +70,24 @@ export const faqs = [
         answer: "We are different from agencies because we are a full-service marketing and sales agency that provides a comprehensive solution for your business needs. We work closely with you to understand your goals and create a customized plan that aligns with your business objectives. We also provide ongoing support and maintenance to ensure that your business is always running smoothly.",
     },
 ];
+
+export const footerLinks = [
+    {
+        category: "Home",
+        links: [
+            { name: "Case Studies", href: "" },
+            { name: "About Us", href: "" },
+            { name: "Blog", href: "" },
+            { name: "Contact", href: "" },
+        ],
+    },
+    {
+        category: "Services",
+        links: [
+            { name: "Marketing", href: "" },
+            { name: "Sales", href: "" },
+            { name: "CMO for Hire", href: "" },
+            { name: "CSO for Hire", href: "" },
+        ],
+    },
+];
