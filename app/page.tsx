@@ -193,7 +193,7 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* ---------------------  Hero  --------------------- */}
+            {/* ---------------------  FAQs  --------------------- */}
             <section className="container py-20 flex md:flex-row flex-col gap-10">
                 <div className="md:w-[35%] space-y-7.5">
                     <SectionHeader

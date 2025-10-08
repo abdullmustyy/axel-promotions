@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import Newsletter from "@/components/newsletter";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import {
@@ -33,6 +34,7 @@ export default function RootLayout({
             >
                 <Navbar />
                 {children}
+                <Newsletter />
             </body>
         </html>
     );

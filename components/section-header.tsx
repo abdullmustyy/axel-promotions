@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
-import Star2 from "@/public/images/svgs/star-2.svg";
-import Image from "next/image";
+import Star from "./icons/star";
 
 interface ISectionHeader extends React.ComponentProps<"div"> {
     heading: React.ReactNode;
@@ -18,12 +17,10 @@ const SectionHeader = ({
             <div className="space-y-2.5">
                 <div
                     data-slot="tag"
-                    className="flex items-center justify-center gap-2"
+                    className="flex items-center justify-center gap-2 text-primary"
                 >
-                    <Image src={Star2} alt="" className="md:size-7.5 size-5" />
-                    <span className="text-primary md:text-3xl text-base">
-                        {tag}
-                    </span>
+                    <Star className="md:size-7.5 size-5" />
+                    <span className="md:text-3xl text-base">{tag}</span>
                 </div>
                 <h2
                     data-slot="heading"
