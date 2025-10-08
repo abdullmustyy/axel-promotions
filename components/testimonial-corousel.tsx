@@ -18,23 +18,26 @@ const TestimonialCorousel = ({
             opts={{
                 loop: true,
             }}
-            className={cn(className)}
+            className={cn(
+                "[&_[data-slot='carousel-content']]:h-full",
+                className,
+            )}
         >
-            <CarouselContent>
+            <CarouselContent className="h-full">
                 {Array.from({ length: 5 }, (_, index) => (
                     <CarouselItem key={index}>
-                        <div className="relative bg-[#F9F9F9] rounded-xxl p-7.5">
-                            <div className="flex items-center gap-2 mb-4">
+                        <div className="relative h-full bg-[#F9F9F9] rounded-xxl p-7.5 flex flex-col gap-4">
+                            <div className="flex items-center gap-2">
                                 <FiveStar className="gap-1.5 [&_svg]:size-5" />
                                 <span className="font-poppins font-medium text-xl">
                                     5.0
                                 </span>
                             </div>
 
-                            <div className="space-y-7.5">
+                            <div className="flex flex-col h-full justify-between gap-7.5">
                                 <div className="space-y-7.5">
                                     <p>
-                                        When we first connected with Axcel
+                                        &quot;When we first connected with Axcel
                                         Promotion, I&apos;ll be honest — I
                                         thought we just needed better ad
                                         creatives. Our sales had plateaued, and
@@ -47,7 +50,7 @@ const TestimonialCorousel = ({
                                     <p>
                                         &quot;They did a full audit of our brand
                                         messaging, offer positioning, customer
-                                        journey, and even backend email flows.
+                                        journey, and even backend email flows.&quot;
                                     </p>
                                 </div>
 
