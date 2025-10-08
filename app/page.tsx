@@ -1,5 +1,7 @@
+import FAQs from "@/components/faqs";
 import FiveStar from "@/components/five-star";
 import HeroServiceCard from "@/components/hero-service-card";
+import Phone from "@/components/icons/phone";
 import SectionHeader from "@/components/section-header";
 import TestimonialCorousel from "@/components/testimonial-corousel";
 import { buttonVariants } from "@/components/ui/button";
@@ -113,7 +115,7 @@ export default function Home() {
                         ({ description, heading, image }, index) => (
                             <div
                                 key={heading + index}
-                                className="flex flex-col gap-2.5 md:p-12.5 p-10 rounded-xxl bg-[#F9F9F9] nth-[2]:bg-primary"
+                                className="flex flex-col gap-2.5 md:p-12.5 p-10 rounded-xxl bg-snow-haze nth-[2]:bg-primary"
                             >
                                 <div className="flex justify-between">
                                     <span
@@ -142,7 +144,7 @@ export default function Home() {
                                     </h6>
                                     <p
                                         className={cn("text-xl text-accent", {
-                                            "text-[#EAEAEA]": index === 1,
+                                            "text-silver-mist": index === 1,
                                         })}
                                     >
                                         {description}
@@ -179,7 +181,7 @@ export default function Home() {
                                 <h5 className="text-2xl font-medium">
                                     70+ Reviews
                                 </h5>
-                                <p className="text-xl text-[#EAEAEA]">
+                                <p className="text-xl text-silver-mist">
                                     Great relationships with clients that speak
                                     for itself
                                 </p>
@@ -189,6 +191,56 @@ export default function Home() {
                         <TestimonialCorousel className="md:w-7/10" />
                     </div>
                 </div>
+            </section>
+
+            {/* ---------------------  Hero  --------------------- */}
+            <section className="container py-20 flex md:flex-row flex-col gap-10">
+                <div className="md:w-[35%] space-y-7.5">
+                    <SectionHeader
+                        tag="FAQs"
+                        heading="Your Questions, Answered"
+                        className="md:[&_[data-slot='tag']]:justify-start md:[&_[data-slot='heading']]:text-start"
+                    />
+
+                    <div className="space-y-5">
+                        <div className="md:bg-primary md:px-12.5 md:py-7.5 rounded-xxl md:space-y-7.5 text-center">
+                            <div className="space-y-2 md:block hidden">
+                                <h5 className="font-medium text-2xl text-white">
+                                    Want to know more?
+                                </h5>
+                                <p className="text-xl text-silver-mist">
+                                    Reach out to us and our team would respond
+                                    asap
+                                </p>
+                            </div>
+                            <Link
+                                href=""
+                                className={cn(
+                                    buttonVariants({ variant: "accent" }),
+                                    "md:h-11 h-15 md:w-auto w-full px-7.5 py-2.5 text-xl mx-auto",
+                                )} 
+                            >
+                                Contact us
+                            </Link>
+                        </div>
+
+                        <div className="bg-snow-haze px-12.5 py-5 rounded-xxl flex items-center md:gap-7.5 gap-4">
+                            <div className="size-12.5 grid place-content-center bg-primary rounded-full">
+                                <Phone className="text-white size-5" />
+                            </div>
+                            <div className="space-y-1.5">
+                                <h5 className="text-xl font-semibold">
+                                    +234 9087654321
+                                </h5>
+                                <span className="text-sm text-concrete-gray">
+                                    24/7 service
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <FAQs className="md:w-[65%]" />
             </section>
         </main>
     );

@@ -12,4 +12,4 @@ interface IDropdownNavItem extends Pick<INav, "name"> {
     dropdownItems: INav[];
 }
 
-type INavItem = ILinkNavItem | IDropdownNavItem;
+export type INavItem = ILinkNavItem | IDropdownNavItem;
