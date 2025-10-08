@@ -21,7 +21,7 @@ export const navItems: INavItem[] = [
         ],
     },
     { type: "link", name: "Case Studies", href: "" },
-    { type: "link", name: "About Us", href: "" },
+    { type: "link", name: "About Us", href: "/about-us" },
     { type: "link", name: "Blog", href: "" },
 ];
 
@@ -76,7 +76,7 @@ export const footerLinks = [
         category: "Home",
         links: [
             { name: "Case Studies", href: "" },
-            { name: "About Us", href: "" },
+            { name: "About Us", href: "/about-us" },
             { name: "Blog", href: "" },
             { name: "Contact", href: "" },
         ],

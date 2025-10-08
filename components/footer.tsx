@@ -1,8 +1,11 @@
+"use client";
+
 import { footerLinks } from "@/lib/data/home";
 import { cn } from "@/lib/utils";
 import FooterLogo from "@/public/images/pngs/footer-logo.png";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Discord from "./icons/discord";
 import Facebook from "./icons/facebook";
 import Instagram from "./icons/instagram";
@@ -10,6 +13,8 @@ import LinkedIn from "./icons/linkedin";
 import { buttonVariants } from "./ui/button";
 
 const Footer = () => {
+    const pathname = usePathname();
+
     return (
         <footer className="container min-h-dvh py-20 space-y-25">
             <div className="flex md:flex-row flex-col md:justify-between gap-25">
@@ -42,7 +47,12 @@ const Footer = () => {
                                 <Link
                                     key={name + index}
                                     href={href}
-                                    className="text-base hover:text-primary transition-colors duration-300"
+                                    className={cn(
+                                        "text-base hover:text-primary transition-colors duration-300",
+                                        {
+                                            "text-primary": pathname === href,
+                                        },
+                                    )}
                                 >
                                     {name}
                                 </Link>
