@@ -7,7 +7,7 @@ import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Button, buttonVariants } from "./ui/button";
 
 const Navbar = () => {
@@ -17,8 +17,16 @@ const Navbar = () => {
     });
     const pathname = usePathname();
 
+    const closeAllMenu = useCallback(() => {
+        setIsOpen({
+            isHamburgerOpen: false,
+            isServiceDropdownOpen: false,
+        });
+    }, []);
+
     return (
         <nav className="container relative">
+            {/* Horizontal nav */}
             <div className="h-20 flex items-center justify-between">
                 <Link href="/">
                     <Image
@@ -142,12 +150,7 @@ const Navbar = () => {
                                                 pathname === item.href,
                                         },
                                     )}
-                                    onClick={() =>
-                                        setIsOpen({
-                                            isHamburgerOpen: false,
-                                            isServiceDropdownOpen: false,
-                                        })
-                                    }
+                                    onClick={closeAllMenu}
                                 >
                                     {item.name}
                                 </Link>
@@ -191,14 +194,7 @@ const Navbar = () => {
                                                     <Link
                                                         href={href}
                                                         className="whitespace-nowrap w-full"
-                                                        onClick={() =>
-                                                            setIsOpen({
-                                                                isHamburgerOpen:
-                                                                    false,
-                                                                isServiceDropdownOpen:
-                                                                    false,
-                                                            })
-                                                        }
+                                                        onClick={closeAllMenu}
                                                     >
                                                         {name}
                                                     </Link>
