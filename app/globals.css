@@ -53,6 +53,21 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --radius-xxl: 20px;
+
+  --animate-marquee: marquee var(--speed, 30s) linear infinite var(--direction, forwards);
+  --animate-spin: spin var(--speed, 5s) linear infinite var(--direction, forwards);
+
+  @keyframes marquee {
+    to {
+      transform: translateX(calc(-100% - var(--marquee-gap)));
+    }
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(-360deg);
+    }
+  }
 }
 
 :root {

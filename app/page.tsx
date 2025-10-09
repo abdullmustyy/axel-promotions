@@ -218,7 +218,7 @@ export default function Home() {
                                 className={cn(
                                     buttonVariants({ variant: "accent" }),
                                     "md:h-11 h-15 md:w-auto w-full px-7.5 py-2.5 text-xl mx-auto",
-                                )} 
+                                )}
                             >
                                 Contact us
                             </Link>

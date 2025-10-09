@@ -58,7 +58,7 @@ const Navbar = () => {
                                         <span>{item.name}</span>
                                         <ChevronDown className="size-4 group-hover:-rotate-180 transition-transform duration-300" />
                                     </div>
-                                    <ul className="invisible group-hover:visible absolute bottom-0 translate-y-full flex flex-col gap-4 p-5 rounded-[10px] bg-[#DB3D0A] text-white z-10 transition-all duration-300">
+                                    <ul className="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute bottom-0 translate-y-9/10 group-hover:translate-y-full flex flex-col gap-4 p-5 rounded-[10px] bg-[#DB3D0A] text-white z-10 transition-all duration-300">
                                         {item.dropdownItems.map(
                                             ({ href, name }, index) => (
                                                 <li
