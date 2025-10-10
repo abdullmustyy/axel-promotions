@@ -39,7 +39,7 @@ const Newsletter = () => {
                 <Form {...form}>
                     <form
                         onSubmit={form.handleSubmit(onSubmit)}
-                        className="flex items-start gap-2.5"
+                        className="flex items-start md:gap-2.5 gap-1"
                     >
                         <FormField
                             control={form.control}

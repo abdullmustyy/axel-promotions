@@ -1,6 +1,6 @@
 "use client";
 
-import { footerLinks } from "@/lib/data/home";
+import { footerLinks } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import FooterLogo from "@/public/images/pngs/footer-logo.png";
 import Image from "next/image";

@@ -45,7 +45,7 @@ const AboutUs = () => {
             <PageHeader page="About Us" />
 
             {/* ---------------------  Hero  --------------------- */}
-            <section className="pt-25 pb-20">
+            <section className="pt-25 pb-20 md:bg-[url('@/public/images/pngs/wavy-vector-hero.png')] bg-[url('@/public/images/pngs/wavy-vector-hero-mobile.png')] bg-no-repeat bg-size-[100%_100%] bg-center">
                 <div className="container md:space-y-22.5 space-y-12.5">
                     <SectionHeader
                         tag="About Us"

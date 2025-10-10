@@ -1,11 +1,11 @@
 import FAQs from "@/components/faqs";
-import FiveStar from "@/components/five-star";
 import HeroServiceCard from "@/components/hero-service-card";
 import Phone from "@/components/icons/phone";
+import JoinBrands from "@/components/join-brands";
 import SectionHeader from "@/components/section-header";
-import TestimonialCorousel from "@/components/testimonial-corousel";
+import Testimonials from "@/components/testimonials";
 import { buttonVariants } from "@/components/ui/button";
-import { brands, ourBenefits } from "@/lib/data/home";
+import { ourBenefits } from "@/lib/data/home";
 import { cn } from "@/lib/utils";
 import HeroImg from "@/public/images/pngs/home-hero-img.png";
 import TakeOffImg from "@/public/images/svgs/takeoff.svg";
@@ -70,22 +70,7 @@ export default function Home() {
             </header>
 
             {/* ---------------------  Join the brands  --------------------- */}
-            <section className="container space-y-6">
-                <p className="text-2xl text-[#F58B3B] font-medium font-poppins text-center">
-                    Join the brands who are scaling with Axel Promotions
-                </p>
-
-                <div className="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 items-center justify-items-center md:gap-8 gap-10">
-                    {brands.map((logo, index) => (
-                        <Image
-                            key={index}
-                            src={logo}
-                            alt=""
-                            className="md:last:col-span-1 last:col-span-2"
-                        />
-                    ))}
-                </div>
-            </section>
+            <JoinBrands />
 
             {/* ---------------------  Our Benefits  --------------------- */}
             <section className="container pt-40 pb-20 space-y-25">
@@ -106,7 +91,7 @@ export default function Home() {
                             "w-fit mx-auto",
                         )}
                     >
-                        Let&apos;s plan your next growth move{" "}
+                        Let&apos;s plan your next growth move
                     </Link>
                 </SectionHeader>
 
@@ -157,41 +142,15 @@ export default function Home() {
             </section>
 
             {/* ---------------------  Testimonials  --------------------- */}
-            <section className="md:bg-[url('@/public/images/pngs/wavy-vector-testimonial.png')] bg-[url('@/public/images/pngs/wavy-vector-testimonial-mobile.png')] bg-no-repeat md:bg-auto bg-size-[100%_80%] md:bg-bottom bg-center">
-                <div className="container py-20 md:space-y-25 space-y-12.5">
-                    <SectionHeader
-                        tag="Testimonials"
-                        heading={
-                            <span>
-                                Real results, Real partners.
-                                <br className="md-br" /> Trusted by our clients
-                            </span>
-                        }
-                    />
-
-                    <div className="flex md:flex-row flex-col gap-7.5">
-                        <div className="md:w-3/10 hidden md:flex flex-col gap-7.5 p-12.5 rounded-xxl bg-primary text-white">
-                            <div className="space-y-2.5">
-                                <h4 className="font-poppins font-semibold text-[3.125rem] text-center">
-                                    4.9
-                                </h4>
-                                <FiveStar className="gap-2" />
-                            </div>
-                            <div className="space-y-5 text-center">
-                                <h5 className="text-2xl font-medium">
-                                    70+ Reviews
-                                </h5>
-                                <p className="text-xl text-silver-mist">
-                                    Great relationships with clients that speak
-                                    for itself
-                                </p>
-                            </div>
-                        </div>
-
-                        <TestimonialCorousel className="md:w-7/10" />
-                    </div>
-                </div>
-            </section>
+            <Testimonials
+                heading={
+                    <span>
+                        Real results, Real partners. <br className="md-br" />
+                        Trusted by our clients
+                    </span>
+                }
+                className="md:bg-[url('@/public/images/pngs/wavy-vector-testimonial.png')] bg-[url('@/public/images/pngs/wavy-vector-testimonial-mobile.png')] bg-no-repeat md:bg-auto bg-size-[100%_80%] md:bg-bottom bg-center"
+            />
 
             {/* ---------------------  FAQs  --------------------- */}
             <section className="container py-20 flex md:flex-row flex-col gap-10">

@@ -8,7 +8,7 @@ import {
 import { cn } from "@/lib/utils";
 import Quotes from "@/public/images/svgs/quotes.svg";
 import Image from "next/image";
-import FiveStar from "./five-star";
+import FiveStar from "../five-star";
 
 const TestimonialCorousel = ({
     className,
@@ -29,7 +29,7 @@ const TestimonialCorousel = ({
                         <div className="relative h-full bg-[#F9F9F9] rounded-xxl p-7.5 flex flex-col gap-4">
                             <div className="flex items-center gap-2">
                                 <FiveStar className="gap-1.5 [&_svg]:size-5" />
-                                <span className="font-poppins font-medium text-xl">
+                                <span className="font-poppins font-medium md:text-xl">
                                     5.0
                                 </span>
                             </div>
@@ -50,7 +50,8 @@ const TestimonialCorousel = ({
                                     <p>
                                         &quot;They did a full audit of our brand
                                         messaging, offer positioning, customer
-                                        journey, and even backend email flows.&quot;
+                                        journey, and even backend email
+                                        flows.&quot;
                                     </p>
                                 </div>
 

@@ -1,12 +1,12 @@
 "use client";
 
-import { navItems } from "@/lib/data/home";
 import { cn } from "@/lib/utils";
 import Metrics from "@/public/images/pngs/metrics.png";
 import Stacks from "@/public/images/pngs/stacks.png";
 import Image from "next/image";
 import { useMemo } from "react";
 import Star from "./icons/star";
+import { navItems } from "@/lib/data";
 
 interface IPageHeaderProps extends React.ComponentProps<"section"> {
     page: string;
@@ -29,14 +29,14 @@ const PageHeader = ({ className, page }: IPageHeaderProps) => {
                 )}
             >
                 <Image src={Metrics} alt="" className="md:block hidden" />
-                <h2 className="font-luxurious-script md:text-[7.25rem] text-[3.125rem] text-primary">
+                <h2 className="font-luxurious-script md:text-[7.25rem] text-[3.125rem] text-primary shrink-0">
                     {page}
                 </h2>
                 <Image src={Stacks} alt="" className="md:block hidden" />
             </div>
 
             <div className="bg-primary whitespace-nowrap">
-                <div className="flex items-center gap-(--marquee-gap) text-white overflow-hidden hover:[&>ul]:[animation-play-state:paused] [--speed:10s] [--marquee-gap:10vw]">
+                <div className="flex items-center gap-(--marquee-gap) text-white overflow-hidden hover:[&_:is(ul,svg)]:[animation-play-state:paused] [--speed:10s] [--marquee-gap:10vw]">
                     {Array.from({ length: 2 }, (_, index) => (
                         <ul
                             key={index}

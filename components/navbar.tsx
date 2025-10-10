@@ -1,6 +1,6 @@
 "use client";
 
-import { navItems } from "@/lib/data/home";
+import { navItems } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Logo from "@/public/images/pngs/logo.png";
 import { ChevronDown } from "lucide-react";

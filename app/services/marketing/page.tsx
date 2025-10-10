@@ -1,0 +1,311 @@
+import JoinBrands from "@/components/join-brands";
+import SectionHeader from "@/components/section-header";
+import Testimonials from "@/components/testimonials";
+import { buttonVariants } from "@/components/ui/button";
+import { caseStudies } from "@/lib/data";
+import {
+    commonProblems,
+    ourBenefits,
+    solutionsAndDeliverables,
+} from "@/lib/data/about-us";
+import { cn } from "@/lib/utils";
+import VideoPlaceholderMobile from "@/public/images/pngs/video-placeholder-mobile.png";
+import VideoPlaceholder from "@/public/images/pngs/video-placeholder.png";
+import ArrowVector from "@/public/images/svgs/arrow-vector.svg";
+import Image from "next/image";
+import Link from "next/link";
+
+const Marketing = () => {
+    return (
+        <>
+            {/* ---------------------  Hero  --------------------- */}
+            <section className="py-25 md:bg-[url('@/public/images/pngs/wavy-vector-hero.png')] bg-[url('@/public/images/pngs/wavy-vector-hero-mobile.png')] bg-no-repeat bg-size-[100%_100%] bg-center">
+                <div className="container flex flex-col gap-12.5">
+                    <SectionHeader
+                        tag="Our Services"
+                        heading={
+                            <span>
+                                AI-Powered Marketing That Drives{" "}
+                                <br className="md-br" />
+                                <span className="font-luxurious-script font-normal md:text-8xl text-[3.125rem] text-[#F58B3B]">
+                                    Conversions{" "}
+                                </span>
+                                and{" "}
+                                <span className="font-luxurious-script font-normal md:text-8xl text-[3.125rem] text-[#F58B3B]">
+                                    Cuts Costs
+                                </span>
+                            </span>
+                        }
+                        className="[&_[data-slot='heading']]:md:text-6xl gap-5 relative"
+                    >
+                        <p className="font-poppins md:text-3xl text-accent text-center">
+                            From strategy to execution, we design campaigns that
+                            <br className="md-br" />
+                            engage, convert, and scale without the bloat.
+                        </p>
+
+                        <div className="md:flex flex-col items-center gap-2 hidden absolute bottom-0 right-0">
+                            <span className="text-xl text-primary">
+                                Words from us
+                            </span>
+                            <Image src={ArrowVector} alt="" className="" />
+                        </div>
+                    </SectionHeader>
+
+                    <Image
+                        src={VideoPlaceholder}
+                        alt=""
+                        className="md:block hidden"
+                    />
+                    <Image
+                        src={VideoPlaceholderMobile}
+                        alt=""
+                        className="block md:hidden"
+                    />
+
+                    <Link
+                        href=""
+                        className={cn(
+                            buttonVariants({ size: "lg" }),
+                            "mx-auto md:w-fit w-full md:text-xl text-lg",
+                        )}
+                    >
+                        Plan my campaign
+                    </Link>
+                </div>
+            </section>
+
+            {/* ---------------------  Join the brands  --------------------- */}
+            <JoinBrands />
+
+            {/* ---------------------  Common Problems  --------------------- */}
+            <section className="container flex flex-col gap-12.5 pt-30 pb-20">
+                <SectionHeader
+                    tag="Common Problems"
+                    heading={
+                        <span>
+                            Is your marketing
+                            <br className="md-br" /> holding you back?
+                        </span>
+                    }
+                />
+
+                <div className="grid lg:grid-cols-4 md:grid-cols-2 md:gap-7.5 gap-5">
+                    {commonProblems.map(({ image, problem }, index) => (
+                        <div
+                            key={index}
+                            className="flex flex-col gap-15 md:py-12.5 md:px-7.5 p-10 rounded-xxl bg-snow-haze nth-[2]:bg-primary"
+                        >
+                            <Image src={image} alt="" className="size-12.5" />
+                            <p
+                                className={cn("text-2xl font-medium", {
+                                    "text-white": index === 1,
+                                })}
+                            >
+                                {problem}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+
+                <Link
+                    href=""
+                    className={cn(
+                        buttonVariants({ size: "lg" }),
+                        "mx-auto md:w-fit w-full md:text-xl text-lg",
+                    )}
+                >
+                    Talk to a growth strategist
+                </Link>
+            </section>
+
+            {/* ---------------------  Solutions & Delieverables  --------------------- */}
+            <section className="container flex flex-col gap-12.5 py-20">
+                <SectionHeader
+                    tag="Solutions & Delieverables"
+                    heading={
+                        <span>
+                            Everything we do to execute high-
+                            <br className="md-br" />
+                            performance marketing
+                        </span>
+                    }
+                />
+
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+                    {solutionsAndDeliverables.map(
+                        ({ description, heading, image }, index) => (
+                            <div
+                                key={heading + index}
+                                className="relative isolate overflow-hidden grid grid-cols-subgrid grid-rows-subgrid row-span-2 items-center gap-15 bg-[#FCFCFC] border-8 border-snow-haze rounded-xxl not-[:nth-child(2)]:py-10"
+                            >
+                                <Image
+                                    src={image}
+                                    alt=""
+                                    className={cn("size-full, object-cover", {
+                                        "mx-auto": index !== 1,
+                                        "row-start-2": index == 1,
+                                    })}
+                                />
+                                <div className="space-y-2 p-8">
+                                    <h5 className="md:text-2xl text-[1.375rem] font-medium text-[#5D5757]">
+                                        {heading}
+                                    </h5>
+                                    <p className="text-base text-[#5C5C5C]">
+                                        {description}
+                                    </p>
+                                </div>
+
+                                <div
+                                    className={cn("absolute -z-10", {
+                                        "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 -top-5.5 -right-1/2 rotate-[28.68deg]":
+                                            index === 0,
+                                        "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 top-[-267px] left-[-32px] rotate-[89.26deg]":
+                                            [2, 3, 4].includes(index),
+                                        "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 top-[-237.51px] left-[-258.58px] rotate-[104.38deg]":
+                                            index === 5,
+                                    })}
+                                />
+                            </div>
+                        ),
+                    )}
+                </div>
+            </section>
+
+            {/* ---------------------  Our Benefits  --------------------- */}
+            <section className="py-20 bg-[url('@/public/images/pngs/vector-48.png')] bg-no-repeat md:bg-size-[100%_100%] md:bg-center">
+                <div className="container flex flex-col gap-25">
+                    <SectionHeader
+                        tag="Our Benefits"
+                        heading={
+                            <span>
+                                What You Get with Axel
+                                <br className="md-br" /> Promotions
+                            </span>
+                        }
+                        className="gap-12.5"
+                    />
+
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-7.5 gap-5">
+                        {ourBenefits.map(
+                            ({ description, heading, image }, index) => (
+                                <div
+                                    key={heading + index}
+                                    className="flex flex-col gap-2.5 md:p-12.5 p-10 rounded-xxl bg-snow-haze nth-[2]:bg-primary"
+                                >
+                                    <div className="flex justify-between">
+                                        <span
+                                            className={cn(
+                                                "font-aeonik-trial font-bold text-[3.125rem] text-primary",
+                                                {
+                                                    "text-white": index === 1,
+                                                },
+                                            )}
+                                        >
+                                            0{index + 1}
+                                        </span>
+                                        <Image
+                                            src={image}
+                                            alt=""
+                                            className="size-37.5 translate-x-7.5 -translate-y-7.5"
+                                        />
+                                    </div>
+                                    <div className="space-y-5">
+                                        <h6
+                                            className={cn(
+                                                "font-medium text-2xl",
+                                                {
+                                                    "text-white": index === 1,
+                                                },
+                                            )}
+                                        >
+                                            {heading}
+                                        </h6>
+                                        <p
+                                            className={cn(
+                                                "text-xl text-accent",
+                                                {
+                                                    "text-silver-mist":
+                                                        index === 1,
+                                                },
+                                            )}
+                                        >
+                                            {description}
+                                        </p>
+                                    </div>
+                                </div>
+                            ),
+                        )}
+                    </div>
+
+                    <Link
+                        href=""
+                        className={cn(
+                            buttonVariants({ size: "lg" }),
+                            "w-fit mx-auto",
+                        )}
+                    >
+                        Get started today
+                    </Link>
+                </div>
+            </section>
+
+            {/* ---------------------  Our Portfolio  --------------------- */}
+            <section className="container flex flex-col gap-12.5 py-20">
+                <SectionHeader
+                    tag="Our Portfolio"
+                    heading={
+                        <span>
+                            Winning campaigns we&apos;ve
+                            <br className="md-br" /> launched
+                        </span>
+                    }
+                    className="gap-12.5"
+                />
+
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-7.5 gap-5">
+                    {caseStudies.map(({ description, tag, image }, index) => (
+                        <div
+                            key={tag + index}
+                            className="grid grid-rows-subgrid row-span-2 gap-5 p-7.5 rounded-xxl bg-snow-haze"
+                        >
+                            <Image src={image} alt="" />
+                            <div className="flex flex-col gap-3">
+                                <span className="px-2 py-1 bg-primary text-base text-white rounded-[6px] w-fit">
+                                    {tag}
+                                </span>
+                                <p className="text-xl text-accent">
+                                    {description}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <Link
+                    href=""
+                    className={cn(
+                        buttonVariants({ size: "lg" }),
+                        "w-fit mx-auto",
+                    )}
+                >
+                    See More Case Studies
+                </Link>
+            </section>
+
+            {/* ---------------------  Testimonials  --------------------- */}
+            <Testimonials
+                heading={
+                    <span>
+                        Real results, Real partners. <br className="md-br" />
+                        <span className="relative md:inline-flex justify-center md:before:inline-block before:hidden before:content-[url(@/public/images/pngs/wavy-vector-18.png)] before:absolute before:-bottom-12">
+                            Trusted by our clients
+                        </span>
+                    </span>
+                }
+            />
+        </>
+    );
+};
+
+export default Marketing;
