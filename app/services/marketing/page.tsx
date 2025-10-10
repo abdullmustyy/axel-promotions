@@ -2,12 +2,12 @@ import JoinBrands from "@/components/join-brands";
 import SectionHeader from "@/components/section-header";
 import Testimonials from "@/components/testimonials";
 import { buttonVariants } from "@/components/ui/button";
-import { caseStudies } from "@/lib/data";
 import {
+    caseStudies,
     commonProblems,
     ourBenefits,
     solutionsAndDeliverables,
-} from "@/lib/data/about-us";
+} from "@/lib/data/services/marketing";
 import { cn } from "@/lib/utils";
 import VideoPlaceholderMobile from "@/public/images/pngs/video-placeholder-mobile.png";
 import VideoPlaceholder from "@/public/images/pngs/video-placeholder.png";
@@ -137,17 +137,25 @@ const Marketing = () => {
                         ({ description, heading, image }, index) => (
                             <div
                                 key={heading + index}
-                                className="relative isolate overflow-hidden grid grid-cols-subgrid grid-rows-subgrid row-span-2 items-center gap-15 bg-[#FCFCFC] border-8 border-snow-haze rounded-xxl not-[:nth-child(2)]:py-10"
+                                className="relative isolate overflow-hidden grid grid-rows-subgrid row-span-2 items-center gap-0 bg-[#FCFCFC] border-8 border-snow-haze rounded-xxl not-[:nth-child(2)]:py-10"
                             >
-                                <Image
-                                    src={image}
-                                    alt=""
-                                    className={cn("size-full, object-cover", {
-                                        "mx-auto": index !== 1,
-                                        "row-start-2": index == 1,
+                                <div
+                                    className={cn({
+                                        "row-start-2": index === 1,
+                                        "p-8": index !== 1,
                                     })}
-                                />
-                                <div className="space-y-2 p-8">
+                                >
+                                    <Image
+                                        src={image}
+                                        alt=""
+                                        className="size-full object-cover"
+                                    />
+                                </div>
+                                <div
+                                    className={cn("space-y-2 px-6 pb-8", {
+                                        "md:pt-0 pt-8": index === 1,
+                                    })}
+                                >
                                     <h5 className="md:text-2xl text-[1.375rem] font-medium text-[#5D5757]">
                                         {heading}
                                     </h5>
@@ -160,6 +168,7 @@ const Marketing = () => {
                                     className={cn("absolute -z-10", {
                                         "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 -top-5.5 -right-1/2 rotate-[28.68deg]":
                                             index === 0,
+                                        hidden: index === 1,
                                         "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 top-[-267px] left-[-32px] rotate-[89.26deg]":
                                             [2, 3, 4].includes(index),
                                         "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 top-[-237.51px] left-[-258.58px] rotate-[104.38deg]":
