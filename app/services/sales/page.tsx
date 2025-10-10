@@ -2,8 +2,8 @@ import JoinBrands from "@/components/join-brands";
 import SectionHeader from "@/components/section-header";
 import Testimonials from "@/components/testimonials";
 import { buttonVariants } from "@/components/ui/button";
-import { caseStudies } from "@/lib/data/services/sales";
 import {
+    caseStudies,
     commonProblems,
     ourBenefits,
     solutionsAndDeliverables,
@@ -124,9 +124,8 @@ const Sales = () => {
                     tag="Solutions & Delieverables"
                     heading={
                         <span>
-                            Everything we do to execute high-
-                            <br className="md-br" />
-                            performance marketing
+                            Sales execution that <br className="md-br" />
+                            moves the needle fast
                         </span>
                     }
                 />
@@ -164,16 +163,19 @@ const Sales = () => {
                                 </div>
 
                                 <div
-                                    className={cn("absolute -z-10", {
-                                        "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 -top-5.5 -right-3/10 rotate-[28.68deg]":
-                                            index === 0,
-                                        "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 top-[-265.87px] left-[-119.68px] rotate-[55.28deg]":
-                                            [1, 2].includes(index),
-                                        "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 top-[-237.51px] left-[-258.58px] rotate-[104.38deg]":
-                                            index === 3,
-                                        "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 top-[-249px] left-[-32px] rotate-[89.deg]":
-                                            [4, 5].includes(index),
-                                    })}
+                                    className={cn(
+                                        "absolute -z-10 bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195",
+                                        {
+                                            "-top-5.5 -right-3/10 rotate-[28.68deg]":
+                                                index === 0,
+                                            "top-[-265.87px] left-[-119.68px] rotate-[55.28deg]":
+                                                [1, 2].includes(index),
+                                            "top-[-237.51px] left-[-258.58px] rotate-[104.38deg]":
+                                                index === 3,
+                                            "top-[-249px] left-[-32px] rotate-[89.26deg]":
+                                                [4, 5].includes(index),
+                                        },
+                                    )}
                                 />
                             </div>
                         ),

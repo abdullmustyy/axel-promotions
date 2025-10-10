@@ -165,15 +165,18 @@ const Marketing = () => {
                                 </div>
 
                                 <div
-                                    className={cn("absolute -z-10", {
-                                        "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 -top-5.5 -right-1/2 rotate-[28.68deg]":
-                                            index === 0,
-                                        hidden: index === 1,
-                                        "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 top-[-267px] left-[-32px] rotate-[89.26deg]":
-                                            [2, 3, 4].includes(index),
-                                        "bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195 top-[-237.51px] left-[-258.58px] rotate-[104.38deg]":
-                                            index === 5,
-                                    })}
+                                    className={cn(
+                                        "absolute -z-10 bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195",
+                                        {
+                                            "-top-5.5 -right-1/2 rotate-[28.68deg]":
+                                                index === 0,
+                                            hidden: index === 1,
+                                            "top-[-267px] left-[-32px] rotate-[89.26deg]":
+                                                [2, 3, 4].includes(index),
+                                            "top-[-237.51px] left-[-258.58px] rotate-[104.38deg]":
+                                                index === 5,
+                                        },
+                                    )}
                                 />
                             </div>
                         ),

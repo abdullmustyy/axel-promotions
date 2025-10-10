@@ -1,114 +1,105 @@
-import AdOptimization from "@/public/images/pngs/ad-optimization.png";
-import CaseStudyLeadMagnet from "@/public/images/pngs/case-study-lead-magnet.png";
+import CampaignPlanning from "@/public/images/pngs/campaign-planning.png";
 import CaseStudy from "@/public/images/pngs/case-study.png";
-import LeadScraping from "@/public/images/pngs/lead-scraping.png";
-import PersonalizedOutreach from "@/public/images/pngs/personalized-outreach.png";
-import SalesPages from "@/public/images/pngs/sales-pages.png";
+import MarketingAlignment from "@/public/images/pngs/marketing-allignment.png";
+import MarketingStrategy from "@/public/images/pngs/marketing-strategy.png";
+import TeamLeadership from "@/public/images/pngs/team-leadership.png";
 import VideoSales from "@/public/images/pngs/video-sales.png";
-import Asset from "@/public/images/svgs/asset.svg";
-import Automation from "@/public/images/svgs/automation.svg";
-import Log from "@/public/images/svgs/log.svg";
-import Outreach from "@/public/images/svgs/outreach.svg";
-import Pipeline from "@/public/images/svgs/pipeline.svg";
-import Pointer from "@/public/images/svgs/pointer.svg";
-import SpeedPipiline from "@/public/images/svgs/speed-pipeline.svg";
+import Accountability from "@/public/images/svgs/accountability.svg";
+import Channels from "@/public/images/svgs/channels.svg";
+import Control from "@/public/images/svgs/control.svg";
+import Insight from "@/public/images/svgs/insight.svg";
+import Nolight from "@/public/images/svgs/no-light.svg";
+import NotAllowed from "@/public/images/svgs/not-allowed.svg";
+import StrategyPrimary from "@/public/images/svgs/strategy-primary.svg";
 
 export const commonProblems = [
     {
-        image: Outreach,
-        problem: "Spending hours on outreach with little to show for it?",
+        image: NotAllowed,
+        problem: "No clear vision, KPIs, or roadmap?",
     },
     {
-        image: Automation,
-        problem: "Automation that feels robotic and gets ignored?",
+        image: Channels,
+        problem: "Marketing channels operating in silos?",
     },
     {
-        image: Pointer,
-        problem: "No compelling narrative or assets to drive interest?",
+        image: Accountability,
+        problem: "Marketing team lacks focus and accountability?",
     },
     {
-        image: Pipeline,
-        problem: "Lack of consistent, qualified leads in your pipeline?",
+        image: Nolight,
+        problem: "Burning budget without knowing what's working?",
     },
 ];
 
 export const solutionsAndDeliverables = [
     {
-        heading: "Lead Scraping & Segmentation",
+        heading: "Marketing Strategy & Vision",
         description:
-            "We identify your ideal buyers using scraping tools, filters, and enrichment then build clean, actionable lead lists.",
-        image: LeadScraping,
+            "We define your goals, KPIs, and positioning—and align every channel to your big picture.",
+        image: MarketingStrategy,
     },
     {
-        heading: "Multi-Channel Personalized Outreach",
+        heading: "Team Leadership & Mentorship",
         description:
-            "Cold emails, social DMs, and even strategic cold calls all built around hyper-personalized messaging and follow-up logic",
-        image: PersonalizedOutreach,
+            "We lead internal teams, hire smart, and manage day-to-day execution with precision.",
+        image: TeamLeadership,
     },
     {
-        heading: "Case Study & Lead Magnet Creation",
+        heading: "Campaign Planning & Oversight",
         description:
-            "We turn your success stories into credibility boosters that open doors and build trust in cold outreach.",
-        image: CaseStudyLeadMagnet,
+            "From high-level initiatives to daily metrics, we ensure your marketing system performs.",
+        image: CampaignPlanning,
     },
     {
         heading: "Video Sales Letter (VSL) Creation",
-        description:
-            "We script, produce, and optimize powerful video sales letters that capture attention and convert leads into booked calls.",
+        description: "Vendor Management & Vendorship",
         image: VideoSales,
     },
     {
-        heading: "Sales Pages That Sell",
+        heading: "Sales & Marketing Alignment",
         description:
-            "We build high-converting landing pages tailored to your offer designed for conversion, not fluff.",
-        image: SalesPages,
-    },
-    {
-        heading: "Offer Crafting & Positioning",
-        description:
-            "We help you refine your offer to be irresistible, clear, and conversion-optimized for cold audiences.",
-        image: AdOptimization,
+            "We connect go-to-market strategy across marketing, sales, and product—because silos kill growth.",
+        image: MarketingAlignment,
     },
 ];
 
 export const ourBenefits = [
     {
-        heading: "Everything Tracked, Everything Optimized",
+        heading: "Clarity & Control",
         description:
-            "See open rates, response rates, booked calls, and close rates all in one dashboard.",
-        image: Log,
+            "No more guessing, instead we provide clear direction and weekly results.",
+        image: Control,
     },
     {
-        heading: "Done-for-You Assets",
+        heading: "Execution + Strategy",
         description:
-            "Sales pages, case studies, VSLs we create every piece you need to sell effectively.",
-        image: Asset,
+            "We're not hands-off. We lead, perform, and optimize continuously.",
+        image: StrategyPrimary,
     },
     {
-        heading: "Speed to Pipeline",
-        description:
-            "We launch outbound campaigns fast because you don't have time to waste.",
-        image: SpeedPipiline,
+        heading: "Experienced Insight",
+        description: "Real CMO-level thinking grounded in growth—not fluff.",
+        image: Insight,
     },
 ];
 
 export const caseStudies = [
     {
         image: CaseStudy,
-        tag: "B2B Consulting",
+        tag: "HealthTech SaaS",
         description:
-            "42 booked meetings in 30 days via outbound email + LinkedIn DM system",
+            "7-figure ARR growth with a full funnel rebuild + team scaling",
     },
     {
         image: CaseStudy,
-        tag: "SaaS Startup",
+        tag: "Professional Services Firm",
         description:
-            "200+ qualified leads scraped and segmented with 11% reply rate",
+            "Brand repositioning + inbound engine created 40% pipeline lift",
     },
     {
         image: CaseStudy,
-        tag: "Coaching Brand",
+        tag: "eCommerce",
         description:
-            "VSL + sales page combo delivered $37k in new business from cold traffic",
+            "Restructured team + creative testing roadmap led to 28% ad efficiency gain",
     },
 ];
