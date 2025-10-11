@@ -4,13 +4,13 @@ import GoToMarket from "@/public/images/pngs/go-to-market.png";
 import MarketingSales from "@/public/images/pngs/marketing-sales.png";
 import SalesSystems from "@/public/images/pngs/sales-system.png";
 import TeamHiring from "@/public/images/pngs/team-hiring.png";
-import Control from "@/public/images/svgs/control.svg";
-import Insight from "@/public/images/svgs/insight.svg";
 import LostDeals from "@/public/images/svgs/lost-deals.svg";
+import Members from "@/public/images/svgs/members.svg";
 import NoSales from "@/public/images/svgs/no-sales.svg";
 import NoSchedule from "@/public/images/svgs/no-schedule.svg";
+import Performance from "@/public/images/svgs/performance.svg";
+import Repeatable from "@/public/images/svgs/repeatable.svg";
 import Reps from "@/public/images/svgs/reps.svg";
-import StrategyPrimary from "@/public/images/svgs/strategy-primary.svg";
 
 export const commonProblems = [
     {
@@ -66,41 +66,39 @@ export const solutionsAndDeliverables = [
 
 export const ourBenefits = [
     {
-        heading: "Clarity & Control",
+        heading: "Repeatable Process",
         description:
-            "No more guessing, instead we provide clear direction and weekly results.",
-        image: Control,
+            "We help you build a scalable sales engine not a one-off campaign.",
+        image: Repeatable,
     },
     {
-        heading: "Execution + Strategy",
+        heading: "Leadership You Can Rely On",
         description:
-            "We're not hands-off. We lead, perform, and optimize continuously.",
-        image: StrategyPrimary,
+            "We show up like an internal team member, not an external advisor",
+        image: Members,
     },
     {
-        heading: "Experienced Insight",
-        description: "Real CMO-level thinking grounded in growth—not fluff.",
-        image: Insight,
+        heading: "Performance Visibility",
+        description: "Know exactly what's working and what's costing you.",
+        image: Performance,
     },
 ];
 
 export const caseStudies = [
     {
         image: CaseStudy,
-        tag: "HealthTech SaaS",
+        tag: "SaaS Company",
         description:
-            "7-figure ARR growth with a full funnel rebuild + team scaling",
+            "Built outbound team from scratch, grew pipeline 6x in 90 days",
     },
     {
         image: CaseStudy,
-        tag: "Professional Services Firm",
-        description:
-            "Brand repositioning + inbound engine created 40% pipeline lift",
+        tag: "Consulting Firm",
+        description: "Redesigned funnel and increased close rates by 34%",
     },
     {
         image: CaseStudy,
-        tag: "eCommerce",
-        description:
-            "Restructured team + creative testing roadmap led to 28% ad efficiency gain",
+        tag: "Tech-Enabled Services",
+        description: "Decreased ramp time for new reps by 50%",
     },
 ];

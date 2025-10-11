@@ -192,9 +192,8 @@ const CSO = () => {
                         tag="Our Benefits"
                         heading={
                             <span>
-                                Why Ambitious Teams Work{" "}
-                                <br className="md-br" />
-                                With Axel Promotions
+                                Why Founders and Sales <br className="md-br" />
+                                Leaders Trust Axel
                             </span>
                         }
                         className="gap-12.5"
