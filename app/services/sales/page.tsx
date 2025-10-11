@@ -130,28 +130,26 @@ const Sales = () => {
                     }
                 />
 
-                <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
+                <div className="flex md:flex-row flex-col md:flex-wrap gap-(--sols-gap) justify-center [--sols-gap:calc(var(--spacing)*6)]">
                     {solutionsAndDeliverables.map(
                         ({ description, heading, image }, index) => (
                             <div
                                 key={heading + index}
-                                className="relative isolate overflow-hidden grid grid-rows-subgrid row-span-2 items-center gap-0 bg-[#FCFCFC] border-8 border-snow-haze rounded-xxl"
+                                className={cn(
+                                    "md:w-[calc(1/3*100%-var(--sols-gap))] min-h-128.5 relative isolate overflow-hidden flex flex-col not-[:nth-child(4)]:gap-10 bg-[#FCFCFC] border-8 border-snow-haze rounded-xxl",
+                                    {
+                                        "flex-col-reverse": index === 0,
+                                        "pt-8": index === 3,
+                                    },
+                                )}
                             >
-                                <div
-                                    className={cn({
-                                        "row-start-2": index === 0,
-                                        "px-6 py-8": index !== 0,
-                                    })}
-                                >
-                                    <Image
-                                        src={image}
-                                        alt=""
-                                        className="size-full object-cover"
-                                    />
+                                <div className="flex-2 flex items-center justify-center">
+                                    <Image src={image} alt="" />
                                 </div>
                                 <div
-                                    className={cn("space-y-2 px-6 pb-8", {
-                                        "md:pt-0 pt-8": index === 0,
+                                    className={cn("space-y-2 px-6 flex-1", {
+                                        "pt-8": index === 0,
+                                        "pb-8": index !== 0,
                                     })}
                                 >
                                     <h5 className="md:text-2xl text-[1.375rem] font-medium text-[#5D5757]">
@@ -280,7 +278,11 @@ const Sales = () => {
                             key={tag + index}
                             className="grid grid-rows-subgrid row-span-2 gap-5 p-7.5 rounded-xxl bg-snow-haze"
                         >
-                            <Image src={image} alt="" />
+                            <Image
+                                src={image}
+                                alt=""
+                                className="size-full object-full"
+                            />
                             <div className="flex flex-col gap-3">
                                 <span className="px-2 py-1 bg-primary text-base text-white rounded-[6px] w-fit">
                                     {tag}

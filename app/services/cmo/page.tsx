@@ -7,7 +7,7 @@ import {
     commonProblems,
     ourBenefits,
     solutionsAndDeliverables,
-} from "@/lib/data/services/sales";
+} from "@/lib/data/services/cmo";
 import { cn } from "@/lib/utils";
 import VideoPlaceholderMobile from "@/public/images/pngs/video-placeholder-mobile.png";
 import VideoPlaceholder from "@/public/images/pngs/video-placeholder.png";
@@ -135,94 +135,56 @@ const CMO = () => {
                     }
                 />
 
-                <div className="flex flex-col gap-6">
-                    <div className="grid lg:grid-cols-3 gap-6">
-                        {solutionsAndDeliverables
-                            .slice(0, 3)
-                            .map(({ description, heading, image }, index) => (
-                                <div
-                                    key={heading + index}
-                                    className="relative isolate overflow-hidden grid grid-rows-subgrid row-span-2 items-center gap-0 bg-[#FCFCFC] border-8 border-snow-haze rounded-xxl"
-                                >
-                                    <div className="px-6 py-8">
-                                        <Image
-                                            src={image}
-                                            alt=""
-                                            className="size-full object-cover"
-                                        />
-                                    </div>
-                                    <div className="space-y-2 px-6 pb-8">
-                                        <h5 className="md:text-2xl text-[1.375rem] font-medium text-[#5D5757]">
-                                            {heading}
-                                        </h5>
-                                        <p className="text-base text-[#5C5C5C]">
-                                            {description}
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        className={cn(
-                                            "absolute -z-10 bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195",
-                                            {
-                                                "top-[-249px] left-[-32px] rotate-[89.26deg]":
-                                                    index === 0,
-                                                "top-[-265.87px] left-[-119.68px] rotate-[55.28deg]":
-                                                    index === 1,
-                                                "-top-5.5 -right-3/10 rotate-[28.68deg]":
-                                                    index === 2,
-                                            },
-                                        )}
-                                    />
+                <div className="flex md:flex-row flex-col md:flex-wrap gap-(--sols-gap) justify-center [--sols-gap:calc(var(--spacing)*6)]">
+                    {solutionsAndDeliverables.map(
+                        ({ description, heading, image }, index) => (
+                            <div
+                                key={heading + index}
+                                className={cn(
+                                    "md:w-[calc(1/3*100%-var(--sols-gap))] min-h-128.5 relative isolate overflow-hidden flex flex-col not-[:nth-child(4)]:gap-10 bg-[#FCFCFC] border-8 border-snow-haze rounded-xxl",
+                                    {
+                                        "flex-col-reverse": index === 4,
+                                        "pt-8": index === 3,
+                                    },
+                                )}
+                            >
+                                <div className="flex-2 flex items-center justify-center">
+                                    <Image src={image} alt="" />
                                 </div>
-                            ))}
-                    </div>
-
-                    <div className="grid lg:grid-cols-2 gap-6 md:max-w-[66.6%] md:mx-auto">
-                        {solutionsAndDeliverables
-                            .slice(3, 5)
-                            .map(({ description, heading, image }, index) => (
                                 <div
-                                    key={heading + index}
-                                    className="relative isolate overflow-hidden grid grid-rows-subgrid row-span-2 items-center gap-0 bg-[#FCFCFC] border-8 border-snow-haze rounded-xxl"
+                                    className={cn("space-y-2 px-6 flex-1", {
+                                        "pt-8": index === 4,
+                                        "pb-8": index !== 4,
+                                    })}
                                 >
-                                    <div
-                                        className={cn("px-6 py-8", {
-                                            "row-start-2": index === 1,
-                                        })}
-                                    >
-                                        <Image
-                                            src={image}
-                                            alt=""
-                                            className="size-full object-cover"
-                                        />
-                                    </div>
-                                    <div
-                                        className={cn("space-y-2 px-6 pb-8", {
-                                            "md:pt-0 pt-8": index === 1,
-                                        })}
-                                    >
-                                        <h5 className="md:text-2xl text-[1.375rem] font-medium text-[#5D5757]">
-                                            {heading}
-                                        </h5>
-                                        <p className="text-base text-[#5C5C5C]">
-                                            {description}
-                                        </p>
-                                    </div>
-
-                                    <div
-                                        className={cn(
-                                            "absolute -z-10 bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195",
-                                            {
-                                                "top-[-237.51px] left-[-258.58px] rotate-[104.38deg]":
-                                                    index === 0,
-                                                "top-[-173px] left-[-343px] rotate-[-76.46deg]":
-                                                    [1, 2].includes(index),
-                                            },
-                                        )}
-                                    />
+                                    <h5 className="md:text-2xl text-[1.375rem] font-medium text-[#5D5757]">
+                                        {heading}
+                                    </h5>
+                                    <p className="text-base text-[#5C5C5C]">
+                                        {description}
+                                    </p>
                                 </div>
-                            ))}
-                    </div>
+
+                                <div
+                                    className={cn(
+                                        "absolute -z-10 bg-[linear-gradient(179.94deg,#FEF6F3_37.78%,#FFFFFF_99.95%)] blur-2xl w-99.5 h-195",
+                                        {
+                                            "top-[-249px] left-[-32px] rotate-[89.26deg]":
+                                                index === 0,
+                                            "top-[-265.87px] left-[-119.68px] rotate-[55.28deg]":
+                                                index === 1,
+                                            "-top-5.5 -right-3/10 rotate-[28.68deg]":
+                                                index === 2,
+                                            "top-[-237.51px] left-[-258.58px] rotate-[104.38deg]":
+                                                index === 3,
+                                            "top-[-173px] left-[-343px] rotate-[-76.46deg]":
+                                                index === 4,
+                                        },
+                                    )}
+                                />
+                            </div>
+                        ),
+                    )}
                 </div>
             </section>
 
@@ -324,7 +286,11 @@ const CMO = () => {
                             key={tag + index}
                             className="grid grid-rows-subgrid row-span-2 gap-5 p-7.5 rounded-xxl bg-snow-haze"
                         >
-                            <Image src={image} alt="" />
+                            <Image
+                                src={image}
+                                alt=""
+                                className="size-full object-full"
+                            />
                             <div className="flex flex-col gap-3">
                                 <span className="px-2 py-1 bg-primary text-base text-white rounded-[6px] w-fit">
                                     {tag}
