@@ -16,23 +16,21 @@ const WhyChooseUsCard = ({
     className,
     description,
     heading,
-    image,
+    Icon,
     index,
 }: IWhyChooseUsCardProps) => {
     return (
         <div
             key={heading + index}
             className={cn(
-                "relative isolate flex flex-col gap-5 md:px-12.5 px-10 py-10 rounded-xxl bg-snow-haze",
+                "group relative isolate flex flex-col gap-5 md:px-12.5 px-10 py-10 rounded-xxl bg-snow-haze hover:bg-primary transition duration-300",
                 className,
             )}
         >
-            <h6 className="font-medium text-xl">{heading}</h6>
-            <p className="text-lg text-accent">{description}</p>
-            <Image
-                src={image}
-                alt=""
-                className="size-37.5 absolute bottom-0 right-0 -z-10"
+            <h6 className="font-medium text-xl group-hover:text-white">{heading}</h6>
+            <p className="text-lg text-accent group-hover:text-silver-mist">{description}</p>
+            <Icon
+                className="size-37.5 absolute bottom-0 right-0 -z-10 text-[#1F1F1F14] group-hover:text-[#FCE3D180]"
             />
         </div>
     );
@@ -61,17 +59,17 @@ const AboutUs = () => {
                         className="[&_[data-slot='heading']]:md:text-[3.5rem]"
                     />
 
-                    <div className="flex md:flex-row flex-col gap-8">
-                        <figure className="md:w-2/5">
+                    <div className="grid lg:grid-cols-5 gap-8 itemscenter">
+                        <div className="col-span-2 rounded-[18.33px] overflow-hidden">
                             <Image
                                 src={AboutHeroImg}
                                 alt=""
                                 className="size-full object-cover"
                             />
-                        </figure>
+                        </div>
 
-                        <div className="md:w-3/5 flex flex-col justify-between gap-10">
-                            <p className="flex flex-col gap-4">
+                        <div className="col-span-3 flex flex-col justify-evenly gap-15">
+                            <p className="flex flex-col gap-4 text-lg">
                                 <span>
                                     At Axel Promotion, we don&apos;t just run
                                     ads — we build growth systems that turn
@@ -143,41 +141,22 @@ const AboutUs = () => {
 
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-7.5 gap-5">
                     {ourApproach.map(
-                        ({ description, heading, image }, index) => (
+                        ({ description, heading, Icon }, index) => (
                             <div
                                 key={heading + index}
-                                className="flex flex-col gap-2.5 md:p-12.5 p-10 rounded-xxl bg-snow-haze nth-[2]:bg-primary"
+                                className="group flex flex-col gap-2.5 md:p-12.5 p-10 rounded-xxl bg-snow-haze hover:bg-primary transition duration-300"
                             >
                                 <div className="flex justify-between">
-                                    <span
-                                        className={cn(
-                                            "font-aeonik-trial font-bold text-[3.125rem] text-primary",
-                                            {
-                                                "text-white": index === 1,
-                                            },
-                                        )}
-                                    >
+                                    <span className="font-aeonik-trial font-bold text-[3.125rem] text-primary group-hover:text-white">
                                         0{index + 1}
                                     </span>
-                                    <Image
-                                        src={image}
-                                        alt=""
-                                        className="size-37.5 translate-x-7.5 -translate-y-7.5"
-                                    />
+                                    <Icon className="size-37.5 translate-x-7.5 -translate-y-7.5 text-[#1F1F1F14] group-hover:text-[#FCE3D180]" />
                                 </div>
                                 <div className="space-y-5">
-                                    <h6
-                                        className={cn("font-medium text-2xl", {
-                                            "text-white": index === 1,
-                                        })}
-                                    >
+                                    <h6 className="font-medium text-2xl group-hover:text-white">
                                         {heading}
                                     </h6>
-                                    <p
-                                        className={cn("text-xl text-accent", {
-                                            "text-silver-mist": index === 1,
-                                        })}
-                                    >
+                                    <p className="text-xl text-accent group-hover:text-silver-mist">
                                         {description}
                                     </p>
                                 </div>
@@ -210,7 +189,7 @@ const AboutUs = () => {
                                     .slice(0, 2)
                                     .map(
                                         (
-                                            { description, heading, image },
+                                            { description, heading, Icon },
                                             index,
                                         ) => (
                                             <WhyChooseUsCard
@@ -218,10 +197,9 @@ const AboutUs = () => {
                                                 {...{
                                                     description,
                                                     heading,
-                                                    image,
+                                                    Icon,
                                                     index,
                                                 }}
-                                                className="first:bg-primary first:[&_h6]:text-white first:[&_p]:text-silver-mist"
                                             />
                                         ),
                                     )}
@@ -231,7 +209,7 @@ const AboutUs = () => {
                                     .slice(2)
                                     .map(
                                         (
-                                            { description, heading, image },
+                                            { description, heading, Icon },
                                             index,
                                         ) => (
                                             <WhyChooseUsCard
@@ -239,7 +217,7 @@ const AboutUs = () => {
                                                 {...{
                                                     description,
                                                     heading,
-                                                    image,
+                                                    Icon,
                                                     index,
                                                 }}
                                             />

@@ -4,29 +4,29 @@ import GoToMarket from "@/public/images/pngs/go-to-market.png";
 import MarketingSales from "@/public/images/pngs/marketing-sales.png";
 import SalesSystems from "@/public/images/pngs/sales-system.png";
 import TeamHiring from "@/public/images/pngs/team-hiring.png";
-import LostDeals from "@/public/images/svgs/lost-deals.svg";
-import Members from "@/public/images/svgs/members.svg";
-import NoSales from "@/public/images/svgs/no-sales.svg";
-import NoSchedule from "@/public/images/svgs/no-schedule.svg";
-import Performance from "@/public/images/svgs/performance.svg";
-import Repeatable from "@/public/images/svgs/repeatable.svg";
-import Reps from "@/public/images/svgs/reps.svg";
+import Members from "@/components/icons/members";
+import Performance from "@/components/icons/performance";
+import Repeatable from "@/components/icons/repeatable";
+import NoCoin from "@/components/icons/no-coin";
+import NoAxesChart from "@/components/icons/no-axes-chart";
+import LostDeals from "@/components/icons/lost-deals";
+import ClipboardNoAccess from "@/components/icons/clipboard-no-access";
 
 export const commonProblems = [
     {
-        image: NoSales,
+        Icon: NoCoin,
         problem: "No sales playbook or consistent pipeline?",
     },
     {
-        image: Reps,
+        Icon: NoAxesChart,
         problem: "Reps underperforming and lacking accountability?",
     },
     {
-        image: LostDeals,
+        Icon: LostDeals,
         problem: "Lost deals due to poor qualification or follow-up?",
     },
     {
-        image: NoSchedule,
+        Icon: ClipboardNoAccess,
         problem: "Misalignment between sales, marketing, and leadership?",
     },
 ];
@@ -69,18 +69,18 @@ export const ourBenefits = [
         heading: "Repeatable Process",
         description:
             "We help you build a scalable sales engine not a one-off campaign.",
-        image: Repeatable,
+        Icon: Repeatable,
     },
     {
         heading: "Leadership You Can Rely On",
         description:
             "We show up like an internal team member, not an external advisor",
-        image: Members,
+        Icon: Members,
     },
     {
         heading: "Performance Visibility",
         description: "Know exactly what's working and what's costing you.",
-        image: Performance,
+        Icon: Performance,
     },
 ];
 

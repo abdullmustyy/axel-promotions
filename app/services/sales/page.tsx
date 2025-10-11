@@ -52,7 +52,7 @@ const Sales = () => {
                     <Image
                         src={VideoPlaceholder}
                         alt=""
-                        className="md:block hidden"
+                        className="md:block hidden size-full"
                     />
                     <Image
                         src={VideoPlaceholderMobile}
@@ -76,31 +76,27 @@ const Sales = () => {
             <JoinBrands />
 
             {/* ---------------------  Common Problems  --------------------- */}
-            <section className="container flex flex-col md:gap-25 gap-12.5 pt-30 pb-20">
+            <section className="container flex flex-col gap-12.5 pt-30 pb-20">
                 <SectionHeader
                     tag="Common Problems"
                     heading={
                         <span>
-                            Tired of playing the <br className="md-br" />
-                            <span className="relative md:inline-flex justify-center md:before:inline-block before:hidden before:content-[url(@/public/images/pngs/wavy-vector-about.png)] before:absolute before:-bottom-12">
-                                numbers game?
-                            </span>
+                            Is your marketing
+                            <br className="md-br" /> holding you back?
                         </span>
                     }
                 />
 
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 md:gap-7.5 gap-5">
-                    {commonProblems.map(({ image, problem }, index) => (
+                    {commonProblems.map(({ Icon, problem }, index) => (
                         <div
                             key={index}
-                            className="flex flex-col gap-15 md:py-12.5 md:px-7.5 p-10 rounded-xxl bg-snow-haze nth-[2]:bg-primary"
+                            className="group flex flex-col gap-15 md:py-12.5 md:px-7.5 p-10 rounded-xxl bg-snow-haze hover:bg-primary transition duration-300"
                         >
-                            <Image src={image} alt="" className="size-12.5" />
-                            <p
-                                className={cn("text-2xl font-medium", {
-                                    "text-white": index === 1,
-                                })}
-                            >
+                            <div className="grid size-15 bg-primary group-hover:bg-snow-haze rounded-full place-content-center">
+                                <Icon className="size-6 text-white group-hover:text-primary" />
+                            </div>
+                            <p className="text-2xl font-medium group-hover:text-white">
                                 {problem}
                             </p>
                         </div>
@@ -114,7 +110,7 @@ const Sales = () => {
                         "mx-auto md:w-fit w-full md:text-xl text-lg",
                     )}
                 >
-                    Talk to a sales strategist
+                    Talk to a growth strategist
                 </Link>
             </section>
 
@@ -197,48 +193,22 @@ const Sales = () => {
 
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-7.5 gap-5">
                         {ourBenefits.map(
-                            ({ description, heading, image }, index) => (
+                            ({ description, heading, Icon }, index) => (
                                 <div
                                     key={heading + index}
-                                    className="flex flex-col gap-2.5 md:p-12.5 p-10 rounded-xxl bg-snow-haze nth-[2]:bg-primary"
+                                    className="group flex flex-col gap-2.5 md:p-12.5 p-10 rounded-xxl bg-snow-haze hover:bg-primary transition duration-300"
                                 >
                                     <div className="flex justify-between">
-                                        <span
-                                            className={cn(
-                                                "font-aeonik-trial font-bold text-[3.125rem] text-primary",
-                                                {
-                                                    "text-white": index === 1,
-                                                },
-                                            )}
-                                        >
+                                        <span className="font-aeonik-trial font-bold text-[3.125rem] text-primary group-hover:text-white">
                                             0{index + 1}
                                         </span>
-                                        <Image
-                                            src={image}
-                                            alt=""
-                                            className="size-37.5 translate-x-7.5 -translate-y-7.5"
-                                        />
+                                        <Icon className="size-37.5 translate-x-7.5 -translate-y-7.5 text-[#1F1F1F14] group-hover:text-[#FCE3D180]" />
                                     </div>
                                     <div className="space-y-5">
-                                        <h6
-                                            className={cn(
-                                                "font-medium text-2xl",
-                                                {
-                                                    "text-white": index === 1,
-                                                },
-                                            )}
-                                        >
+                                        <h6 className="font-medium text-2xl group-hover:text-white">
                                             {heading}
                                         </h6>
-                                        <p
-                                            className={cn(
-                                                "text-xl text-accent",
-                                                {
-                                                    "text-silver-mist":
-                                                        index === 1,
-                                                },
-                                            )}
-                                        >
+                                        <p className="text-xl text-accent group-hover:text-silver-mist">
                                             {description}
                                         </p>
                                     </div>

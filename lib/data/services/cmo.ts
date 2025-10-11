@@ -4,29 +4,29 @@ import MarketingAlignment from "@/public/images/pngs/marketing-allignment.png";
 import MarketingStrategy from "@/public/images/pngs/marketing-strategy.png";
 import TeamLeadership from "@/public/images/pngs/team-leadership.png";
 import VideoSales from "@/public/images/pngs/video-sales.png";
-import Accountability from "@/public/images/svgs/accountability.svg";
-import Channels from "@/public/images/svgs/channels.svg";
-import Control from "@/public/images/svgs/control.svg";
-import Insight from "@/public/images/svgs/insight.svg";
-import Nolight from "@/public/images/svgs/no-light.svg";
-import NotAllowed from "@/public/images/svgs/not-allowed.svg";
-import StrategyPrimary from "@/public/images/svgs/strategy-primary.svg";
+import Control from "@/components/icons/control";
+import Insight from "@/components/icons/insight";
+import Strategy from "@/components/icons/strategy";
+import NotAllowed from "@/components/icons/not-allowed";
+import Channels from "@/components/icons/channels";
+import AccountNetworkOff from "@/components/icons/account-network-off";
+import Nolight from "@/components/icons/nolight";
 
 export const commonProblems = [
     {
-        image: NotAllowed,
+        Icon: NotAllowed,
         problem: "No clear vision, KPIs, or roadmap?",
     },
     {
-        image: Channels,
+        Icon: Channels,
         problem: "Marketing channels operating in silos?",
     },
     {
-        image: Accountability,
+        Icon: AccountNetworkOff,
         problem: "Marketing team lacks focus and accountability?",
     },
     {
-        image: Nolight,
+        Icon: Nolight,
         problem: "Burning budget without knowing what's working?",
     },
 ];
@@ -68,18 +68,18 @@ export const ourBenefits = [
         heading: "Clarity & Control",
         description:
             "No more guessing, instead we provide clear direction and weekly results.",
-        image: Control,
+        Icon: Control,
     },
     {
         heading: "Execution + Strategy",
         description:
             "We're not hands-off. We lead, perform, and optimize continuously.",
-        image: StrategyPrimary,
+        Icon: Strategy,
     },
     {
         heading: "Experienced Insight",
         description: "Real CMO-level thinking grounded in growth—not fluff.",
-        image: Insight,
+        Icon: Insight,
     },
 ];
 

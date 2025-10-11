@@ -5,29 +5,29 @@ import LeadScraping from "@/public/images/pngs/lead-scraping.png";
 import PersonalizedOutreach from "@/public/images/pngs/personalized-outreach.png";
 import SalesPages from "@/public/images/pngs/sales-pages.png";
 import VideoSales from "@/public/images/pngs/video-sales.png";
-import Asset from "@/public/images/svgs/asset.svg";
-import Automation from "@/public/images/svgs/automation.svg";
-import Log from "@/public/images/svgs/log.svg";
-import Outreach from "@/public/images/svgs/outreach.svg";
-import Pipeline from "@/public/images/svgs/pipeline.svg";
-import Pointer from "@/public/images/svgs/pointer.svg";
-import SpeedPipiline from "@/public/images/svgs/speed-pipeline.svg";
+import Asset from "@/components/icons/asset";
+import Log from "@/components/icons/log";
+import SpeedPipiline from "@/components/icons/speed-pipiline";
+import Outreach from "@/components/icons/outreach";
+import Automation from "@/components/icons/automation";
+import Pointer from "@/components/icons/pointer";
+import Pipeline from "@/components/icons/pipeline";
 
 export const commonProblems = [
     {
-        image: Outreach,
+        Icon: Outreach,
         problem: "Spending hours on outreach with little to show for it?",
     },
     {
-        image: Automation,
+        Icon: Automation,
         problem: "Automation that feels robotic and gets ignored?",
     },
     {
-        image: Pointer,
+        Icon: Pointer,
         problem: "No compelling narrative or assets to drive interest?",
     },
     {
-        image: Pipeline,
+        Icon: Pipeline,
         problem: "Lack of consistent, qualified leads in your pipeline?",
     },
 ];
@@ -76,19 +76,19 @@ export const ourBenefits = [
         heading: "Everything Tracked, Everything Optimized",
         description:
             "See open rates, response rates, booked calls, and close rates all in one dashboard.",
-        image: Log,
+        Icon: Log,
     },
     {
         heading: "Done-for-You Assets",
         description:
             "Sales pages, case studies, VSLs we create every piece you need to sell effectively.",
-        image: Asset,
+        Icon: Asset,
     },
     {
         heading: "Speed to Pipeline",
         description:
             "We launch outbound campaigns fast because you don't have time to waste.",
-        image: SpeedPipiline,
+        Icon: SpeedPipiline,
     },
 ];
 

@@ -1,3 +1,10 @@
+import ChartColumnLow from "@/components/icons/chart-column-low";
+import Eye from "@/components/icons/eye";
+import Plug from "@/components/icons/plug";
+import Robot from "@/components/icons/robot";
+import System from "@/components/icons/system";
+import XFlow from "@/components/icons/x-flow";
+import XTarget from "@/components/icons/x-target";
 import AdOptimization from "@/public/images/pngs/ad-optimization.png";
 import CaseStudy from "@/public/images/pngs/case-study.png";
 import ContentMarketing from "@/public/images/pngs/content-marketing.png";
@@ -5,20 +12,13 @@ import EmailMarketing from "@/public/images/pngs/email-marketing.png";
 import MarketResearch from "@/public/images/pngs/market-research.png";
 import PaidAdvert from "@/public/images/pngs/paid-advert.png";
 import SEO from "@/public/images/pngs/seo.png";
-import AdConversion from "@/public/images/svgs/ad-conversion.svg";
-import Eye from "@/public/images/svgs/eye.svg";
-import Plug from "@/public/images/svgs/plug.svg";
-import Robot from "@/public/images/svgs/robot.svg";
-import SystemGray from "@/public/images/svgs/systems-gray.svg";
-import XFlow from "@/public/images/svgs/x-flow.svg";
-import XTarget from "@/public/images/svgs/x-target.svg";
 
 export const commonProblems = [
-    { image: AdConversion, problem: "Wasting ad spend with low conversions?" },
-    { image: Plug, problem: "Content not aligned with your offer or brand?" },
-    { image: XTarget, problem: "Struggling to generate qualified leads?" },
+    { Icon: ChartColumnLow, problem: "Wasting ad spend with low conversions?" },
+    { Icon: Plug, problem: "Content not aligned with your offer or brand?" },
+    { Icon: XTarget, problem: "Struggling to generate qualified leads?" },
     {
-        image: XFlow,
+        Icon: XFlow,
         problem: "Lacking a marketing strategy tied to business outcomes?",
     },
 ];
@@ -63,19 +63,19 @@ export const ourBenefits = [
         heading: "Strategy Meets Execution",
         description:
             "We go beyond advice — we build, optimize, and scale with you.",
-        image: SystemGray,
+        Icon: System,
     },
     {
         heading: "Fast, Measurable Results",
         description:
             "From lead generation to paid campaigns, we optimize every dollar spent",
-        image: Eye,
+        Icon: Eye,
     },
     {
         heading: "Aligned Incentives",
         description:
             "We win when you win. Flexible packages, performance bonuses, and clear ROI.",
-        image: Robot,
+        Icon: Robot,
     },
 ];
 

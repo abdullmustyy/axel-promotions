@@ -1,29 +1,29 @@
-import Award from "@/public/images/svgs/award.svg";
-import Bars from "@/public/images/svgs/bars.svg";
-import Scale from "@/public/images/svgs/scale.svg";
-import Shield from "@/public/images/svgs/shield.svg";
-import Siren from "@/public/images/svgs/siren.svg";
-import Strategy from "@/public/images/svgs/strategy.svg";
-import System from "@/public/images/svgs/systems.svg";
+import Scale from "@/components/icons/scale";
+import Strategy from "@/components/icons/strategy";
+import System from "@/components/icons/system";
+import Award from "@/components/icons/award";
+import Bars from "@/components/icons/bars";
+import Shield from "@/components/icons/shield";
+import Siren from "@/components/icons/siren";
 
 export const ourApproach = [
     {
         heading: "Strategy",
         description:
             "We run deep audits, ask  questions, and strip things down until the message is clear.",
-        image: Strategy,
+        Icon: Strategy,
     },
     {
         heading: "Systems",
         description:
             "Once the strategy is solid, we build systems that can carry it. Marketing shouldn't be a gamble",
-        image: System,
+        Icon: System,
     },
     {
         heading: "Scale",
         description:
             "Only when the strategy is validated and the systems are converting do we scale.",
-        image: Scale,
+        Icon: Scale,
     },
 ];
 
@@ -32,24 +32,24 @@ export const whyChooseUs = [
         heading: "Certified Experts",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: Shield,
+        Icon: Shield,
     },
     {
         heading: "Proven Results",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: Bars,
+        Icon: Bars,
     },
     {
         heading: "Award Winning",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: Award,
+        Icon: Award,
     },
     {
         heading: "Transparent Reporting",
         description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: Siren,
+        Icon: Siren,
     },
 ];
