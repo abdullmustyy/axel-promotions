@@ -17,7 +17,9 @@ const contactSchema = z.object({
     companyName: z
         .string("Please enter your company name.")
         .min(1, "Please enter your company name."),
-    country: z.string("Please select a country."),
+    country: z
+        .string("Please select a country.")
+        .min(1, "Please select a country."),
     message: z
         .string("Please enter your message.")
         .min(1, "Please enter your message."),
@@ -28,6 +30,13 @@ type contactFormType = z.infer<typeof contactSchema>;
 const Contact = () => {
     const form = useForm<contactFormType>({
         resolver: zodResolver(contactSchema),
+        defaultValues: {
+            companyName: "",
+            name: "",
+            email: "",
+            country: "",
+            message: "",
+        },
     });
 
     function onSubmit(values: contactFormType) {
@@ -122,7 +131,7 @@ const Contact = () => {
                             render={({ field }) => (
                                 <Textarea
                                     {...field}
-                                    placeholder="Your country"
+                                    placeholder="Type your message…."
                                     className="resize-none h-34.5 focus-visible:ring-0 border-[#C3CAD9] focus-visible:border-[#C3CAD9] placeholder:text-[#959EAD] placeholder:text-base text-base caret-primary aria-invalid:border-primary"
                                 />
                             )}
