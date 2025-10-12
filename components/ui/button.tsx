@@ -10,6 +10,8 @@ const buttonVariants = cva(
             variant: {
                 default:
                     "bg-[linear-gradient(90deg,rgba(219,61,10,1)_14.43%,rgba(255,165,86,1)_99.89%)] text-primary-foreground hover:bg-[linear-gradient(90deg,rgba(219,61,10,0.9)_14.43%,rgba(255,165,86,0.9)_99.89%)]",
+                primary:
+                    "bg-primary text-primary-foreground hover:bg-primary/90",
                 accent: "bg-sunset-orange text-primary-foreground hover:bg-sunset-orange/90",
                 destructive:
                     "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const Page = () => {
-  return (
-    <div>Page</div>
-  )
-}
+    return <main className="container py-20"></main>;
+};
 
-export default Page
+export default Page;

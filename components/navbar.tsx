@@ -83,8 +83,9 @@ const Navbar = () => {
 
                 <div className="flex items-center gap-2.5">
                     <Link
-                        href=""
+                        href="/contact"
                         className={cn(buttonVariants(), "rounded-full py-2.5")}
+                        onClick={closeAllMenu}
                     >
                         Contact
                     </Link>
