@@ -143,7 +143,7 @@ const CountryDropdownComponent = (
                         <div className="sticky top-0 z-10 bg-popover">
                             <CommandInput
                                 placeholder="Search country..."
-                                className="h-14 text-sm placeholder:text-[#959EAD] border-0 rounded-none focus-visible:ring-0"
+                                className="text-sm placeholder:text-[#959EAD] border-0 rounded-none focus-visible:ring-0"
                             />
                         </div>
                         <CommandEmpty>No country found.</CommandEmpty>

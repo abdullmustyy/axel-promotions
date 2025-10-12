@@ -59,7 +59,7 @@ const Contact = () => {
                     onSubmit={form.handleSubmit(onSubmit)}
                     className="md:w-[66%] min-h-dvh bg-white md:p-8"
                 >
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="grid md:grid-cols-2 items-start gap-8">
                         <ControlledFieldWrapper
                             control={form.control}
                             name="name"
