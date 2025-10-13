@@ -8,8 +8,8 @@ const PlaceholderBlogs = () => {
         <div className="flex flex-col md:gap-5 gap-10">
             {placeholderBlogs.map(
                 ({ date, description, heading, image, tag }, index) => (
-                    <div key={index} className="md:p-7.5 flex flex-col gap-5">
-                        <div className="h-100 w-full rounded-2xl overflow-hidden">
+                    <div key={index} className="md:p-7.5 p-5 flex flex-col gap-5 bg-snow-haze rounded-xxl">
+                        <div className="md:h-100 h-62.5 w-full rounded-2xl overflow-hidden">
                             <Image
                                 src={image}
                                 alt=""

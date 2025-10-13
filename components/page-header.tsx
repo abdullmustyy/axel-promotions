@@ -1,15 +1,15 @@
 "use client";
 
+import { navItems } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import Metrics from "@/public/images/pngs/metrics.png";
 import Stacks from "@/public/images/pngs/stacks.png";
 import Image from "next/image";
 import { useMemo } from "react";
 import Star from "./icons/star";
-import { navItems } from "@/lib/data";
 
 interface IPageHeaderProps extends React.ComponentProps<"section"> {
-    page: string;
+    page: React.ReactNode;
 }
 
 const PageHeader = ({ className, page }: IPageHeaderProps) => {
@@ -29,7 +29,7 @@ const PageHeader = ({ className, page }: IPageHeaderProps) => {
                 )}
             >
                 <Image src={Metrics} alt="" className="md:block hidden" />
-                <h2 className="font-luxurious-script md:text-[7.25rem] text-[3.125rem] text-primary shrink-0">
+                <h2 className="font-luxurious-script md:text-[7.25rem] leading-17.5 text-[3.125rem] text-primary text-center shrink-0">
                     {page}
                 </h2>
                 <Image src={Stacks} alt="" className="md:block hidden" />

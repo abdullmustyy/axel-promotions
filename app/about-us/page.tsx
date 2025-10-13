@@ -60,7 +60,7 @@ const AboutUs = () => {
                     />
 
                     <div className="grid lg:grid-cols-5 gap-8 itemscenter">
-                        <div className="col-span-2 rounded-[18.33px] overflow-hidden">
+                        <div className="md:col-span-2 rounded-[18.33px] overflow-hidden">
                             <Image
                                 src={AboutHeroImg}
                                 alt=""
@@ -68,7 +68,7 @@ const AboutUs = () => {
                             />
                         </div>
 
-                        <div className="col-span-3 flex flex-col justify-evenly gap-15">
+                        <div className="md:col-span-3 flex flex-col justify-evenly gap-15">
                             <p className="flex flex-col gap-4 text-lg">
                                 <span>
                                     At Axel Promotion, we don&apos;t just run

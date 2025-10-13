@@ -19,7 +19,7 @@ const TABS: Array<Record<"label" | "value", string>> = [
     { label: "CSO/CMO Blog Post", value: "cso-cmo" },
 ];
 
-const Page = () => {
+const Blog = () => {
     const [currentTab, setCurrentTab] = React.useState("all");
 
     return (
@@ -30,7 +30,7 @@ const Page = () => {
             <section className="container py-20 flex flex-col md:gap-15 gap-5">
                 <SectionHeader
                     tag="News & Blogs"
-                    heading=" Growth Insights from the Frontlines"
+                    heading="Growth Insights from the Frontlines"
                     className="[&_[data-slot='heading']]:md:text-6xl"
                 />
 
@@ -86,4 +86,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default Blog;
