@@ -74,7 +74,7 @@ const CaseStudies = () => {
                 </div>
 
                 <Link
-                    href=""
+                    href="/contact"
                     className={cn(
                         buttonVariants({ size: "lg" }),
                         "w-fit mx-auto",

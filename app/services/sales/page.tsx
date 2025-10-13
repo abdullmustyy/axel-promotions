@@ -61,7 +61,7 @@ const Sales = () => {
                     />
 
                     <Link
-                        href=""
+                        href="/contact"
                         className={cn(
                             buttonVariants({ size: "lg" }),
                             "mx-auto md:w-fit w-full md:text-xl text-lg",
@@ -104,7 +104,7 @@ const Sales = () => {
                 </div>
 
                 <Link
-                    href=""
+                    href="/contact"
                     className={cn(
                         buttonVariants({ size: "lg" }),
                         "mx-auto md:w-fit w-full md:text-xl text-lg",
@@ -218,7 +218,7 @@ const Sales = () => {
                     </div>
 
                     <Link
-                        href=""
+                        href="/contact"
                         className={cn(
                             buttonVariants({ size: "lg" }),
                             "w-fit mx-auto",
@@ -266,7 +266,7 @@ const Sales = () => {
                 </div>
 
                 <Link
-                    href=""
+                    href="/case-studies"
                     className={cn(
                         buttonVariants({ size: "lg" }),
                         "w-fit mx-auto",

@@ -24,7 +24,7 @@ const Footer = () => {
                         <br /> without guesswork?
                     </h3>
                     <Link
-                        href=""
+                        href="/contact"
                         className={cn(
                             buttonVariants({ size: "lg" }),
                             "md:w-fit w-full",

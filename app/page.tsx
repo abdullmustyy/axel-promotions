@@ -38,7 +38,7 @@ export default function Home() {
                     </div>
 
                     <Link
-                        href=""
+                        href="/contact"
                         className={cn(
                             buttonVariants({ size: "lg" }),
                             "md:w-fit",
@@ -85,7 +85,7 @@ export default function Home() {
                     className="gap-12.5"
                 >
                     <Link
-                        href=""
+                        href="/contact"
                         className={cn(
                             buttonVariants({ size: "lg" }),
                             "w-fit mx-auto",
@@ -154,7 +154,7 @@ export default function Home() {
                                 </p>
                             </div>
                             <Link
-                                href=""
+                                href="/contact"
                                 className={cn(
                                     buttonVariants({ variant: "accent" }),
                                     "md:h-11 h-15 md:w-auto w-full px-7.5 py-2.5 text-xl mx-auto",

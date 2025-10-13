@@ -228,7 +228,7 @@ const AboutUs = () => {
                     </div>
 
                     <Link
-                        href=""
+                        href="/contact"
                         className={cn(
                             buttonVariants({ size: "lg" }),
                             "mx-auto md:w-fit w-full md:text-xl text-lg",
