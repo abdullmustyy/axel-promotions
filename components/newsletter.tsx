@@ -26,7 +26,7 @@ const Newsletter = () => {
     }
 
     return (
-        <div className="bg-[url('@/public/images/pngs/wavy-vector-newsletter.png'),linear-gradient(0deg,#F07119,#F07119)] bg-no-repeat md:bg-position-[center_65%] bg-bottom flex justify-center md:px-0 px-4 md:py-26.5 py-15">
+        <div className="bg-[url('@/public/images/pngs/wavy-vector-newsletter.png'),linear-gradient(0deg,#F07119,#F07119)] bg-no-repeat bg-size-[100%_auto] md:bg-position-[center_65%] bg-bottom flex justify-center md:px-0 px-4 md:py-26.5 py-15">
             <SectionHeader
                 tag="Newsletter"
                 heading={

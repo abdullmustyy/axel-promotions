@@ -16,7 +16,7 @@ const Footer = () => {
     const pathname = usePathname();
 
     return (
-        <footer className="container min-h-dvh py-20 space-y-25">
+        <footer className="w-contain min-h-dvh py-20 space-y-25">
             <div className="flex md:flex-row flex-col md:justify-between gap-25">
                 <div className="space-y-12.5">
                     <h3 className="font-aeonik-trial md:text-[3.125rem]/[60px] text-3xl md:text-left text-center">

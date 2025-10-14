@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const JoinBrands = () => {
     return (
-        <section className="container space-y-6">
+        <section className="w-contain space-y-6">
             <p className="text-2xl text-[#F58B3B] font-medium font-poppins text-center">
                 Join the brands who are scaling with Axel Promotions
             </p>

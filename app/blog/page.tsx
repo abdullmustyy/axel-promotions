@@ -27,7 +27,7 @@ const Blog = () => {
             {/* ---------------------  Header  --------------------- */}
             <PageHeader page="Blogs" />
 
-            <section className="container py-20 flex flex-col md:gap-15 gap-5">
+            <section className="w-contain py-20 flex flex-col md:gap-15 gap-5">
                 <SectionHeader
                     tag="News & Blogs"
                     heading="Growth Insights from the Frontlines"

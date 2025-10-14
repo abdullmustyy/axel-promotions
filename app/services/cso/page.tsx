@@ -20,7 +20,7 @@ const CSO = () => {
         <>
             {/* ---------------------  Hero  --------------------- */}
             <section className="py-25 md:bg-[url('@/public/images/pngs/wavy-vector-hero.png')] bg-[url('@/public/images/pngs/wavy-vector-hero-mobile.png')] bg-no-repeat bg-size-[100%_100%] bg-center">
-                <div className="container flex flex-col gap-12.5">
+                <div className="w-contain flex flex-col gap-12.5">
                     <SectionHeader
                         tag="Our Services"
                         heading={
@@ -80,7 +80,7 @@ const CSO = () => {
             <JoinBrands />
 
             {/* ---------------------  Common Problems  --------------------- */}
-            <section className="container flex flex-col md:gap-25 gap-12.5 pt-30 pb-20">
+            <section className="w-contain flex flex-col md:gap-25 gap-12.5 pt-30 pb-20">
                 <SectionHeader
                     tag="Common Problems"
                     heading={
@@ -122,7 +122,7 @@ const CSO = () => {
             </section>
 
             {/* ---------------------  Solutions & Delieverables  --------------------- */}
-            <section className="container flex flex-col gap-12.5 py-20">
+            <section className="w-contain flex flex-col gap-12.5 py-20">
                 <SectionHeader
                     tag="Solutions & Delieverables"
                     heading={
@@ -185,7 +185,7 @@ const CSO = () => {
 
             {/* ---------------------  Our Benefits  --------------------- */}
             <section className="py-20 bg-[url('@/public/images/pngs/vector-48.png')] bg-no-repeat md:bg-size-[100%_100%] md:bg-center">
-                <div className="container flex flex-col gap-25">
+                <div className="w-contain flex flex-col gap-25">
                     <SectionHeader
                         tag="Our Benefits"
                         heading={
@@ -236,7 +236,7 @@ const CSO = () => {
             </section>
 
             {/* ---------------------  Our Portfolio  --------------------- */}
-            <section className="container flex flex-col gap-12.5 py-20">
+            <section className="w-contain flex flex-col gap-12.5 py-20">
                 <SectionHeader
                     tag="Our Portfolio"
                     heading={
@@ -252,7 +252,7 @@ const CSO = () => {
                     {caseStudies.map(({ description, tag, image }, index) => (
                         <div
                             key={tag + index}
-                            className="grid grid-rows-subgrid row-span-2 gap-5 p-7.5 rounded-xxl bg-snow-haze"
+                            className="grid md:grid-rows-subgrid md:row-span-2 gap-5 p-7.5 rounded-xxl bg-snow-haze"
                         >
                             <Image
                                 src={image}

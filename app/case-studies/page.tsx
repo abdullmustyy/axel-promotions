@@ -23,7 +23,7 @@ const CaseStudies = () => {
             />
 
             {/* ---------------------  Our Case study  --------------------- */}
-            <section className="container py-20 flex flex-col md:gap-15 gap-12.5">
+            <section className="w-contain py-20 flex flex-col md:gap-15 gap-12.5">
                 <SectionHeader
                     tag="Our Case study"
                     heading={
@@ -40,7 +40,7 @@ const CaseStudies = () => {
                         ({ author, tag, image, heading }, index) => (
                             <div
                                 key={tag + index}
-                                className="grid grid-rows-subgrid row-span-2 gap-5 md:p-7.5 p-5 rounded-xxl bg-snow-haze"
+                                className="grid md:grid-rows-subgrid md:row-span-2 gap-5 md:p-7.5 p-5 rounded-xxl bg-snow-haze"
                             >
                                 <Image
                                     src={image}

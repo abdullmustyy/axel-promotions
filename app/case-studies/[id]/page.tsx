@@ -14,7 +14,7 @@ const CaseStudy = () => {
             {/* ---------------------  Header  --------------------- */}
             <PageHeader page="Details" />
 
-            <section className="container pt-8 pb-20 flex flex-col gap-8">
+            <section className="w-contain pt-8 pb-20 flex flex-col gap-8">
                 <div className="md:h-156 h-62.5 w-full rounded-2xl overflow-hidden">
                     <Image
                         src={CaseStudyPlaceholder}
@@ -197,7 +197,7 @@ const CaseStudy = () => {
                 </div>
             </section>
 
-            <section className="container py-20 flex flex-col md:gap-15 gap-12.5">
+            <section className="w-contain py-20 flex flex-col md:gap-15 gap-12.5">
                 <SectionHeader
                     tag="Our Case study"
                     heading="See more of our work"
@@ -210,7 +210,7 @@ const CaseStudy = () => {
                         .map(({ author, tag, image, heading }, index) => (
                             <div
                                 key={tag + index}
-                                className="grid grid-rows-subgrid row-span-2 gap-5 md:p-7.5 p-5 rounded-xxl bg-snow-haze"
+                                className="grid md:grid-rows-subgrid md:row-span-2 gap-5 md:p-7.5 p-5 rounded-xxl bg-snow-haze"
                             >
                                 <Image
                                     src={image}

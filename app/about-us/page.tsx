@@ -27,11 +27,13 @@ const WhyChooseUsCard = ({
                 className,
             )}
         >
-            <h6 className="font-medium text-xl group-hover:text-white">{heading}</h6>
-            <p className="text-lg text-accent group-hover:text-silver-mist">{description}</p>
-            <Icon
-                className="size-37.5 absolute bottom-0 right-0 -z-10 text-[#1F1F1F14] group-hover:text-[#FCE3D180]"
-            />
+            <h6 className="font-medium text-xl group-hover:text-white">
+                {heading}
+            </h6>
+            <p className="text-lg text-accent group-hover:text-silver-mist">
+                {description}
+            </p>
+            <Icon className="size-37.5 absolute bottom-0 right-0 -z-10 text-[#1F1F1F14] group-hover:text-[#FCE3D180]" />
         </div>
     );
 };
@@ -44,7 +46,7 @@ const AboutUs = () => {
 
             {/* ---------------------  Hero  --------------------- */}
             <section className="pt-25 pb-20 md:bg-[url('@/public/images/pngs/wavy-vector-hero.png')] bg-[url('@/public/images/pngs/wavy-vector-hero-mobile.png')] bg-no-repeat bg-size-[100%_100%] bg-center">
-                <div className="container md:space-y-22.5 space-y-12.5">
+                <div className="w-contain md:space-y-22.5 space-y-12.5">
                     <SectionHeader
                         tag="About Us"
                         heading={
@@ -72,7 +74,7 @@ const AboutUs = () => {
                             <p className="flex flex-col gap-4 text-lg">
                                 <span>
                                     At Axel Promotion, we don&apos;t just run
-                                    ads — we build growth systems that turn
+                                    ads, we build growth systems that turn
                                     attention into actual revenue.
                                 </span>
                                 <span>
@@ -81,18 +83,19 @@ const AboutUs = () => {
                                     clicks. From early-stage startups to
                                     established businesses, we help teams
                                     clarify their offer, tighten their funnel,
-                                    and launch campaigns that move the needle —
-                                    not just vanity metrics.
+                                    and launch campaigns that move the
+                                    needle...Not just vanity metrics.
                                 </span>
                                 <span>
                                     Our work spans digital strategy, paid media,
                                     email flows, sales enablement, and
                                     boots-on-ground activations. But what sets
-                                    us apart isn&apos;t the services — it&apos;s
-                                    how we think. We approach every brand like
-                                    operators, not spectators. That means deep
-                                    audits, sharp positioning, honest feedback,
-                                    and rapid execution.
+                                    us apart isn&apos;t the services.It&apos;s
+                                    our approach to your growth. We approach
+                                    every brand like operators, not spectators.
+                                    That means deep audits, sharp positioning,
+                                    honest feedback, and rapid execution without
+                                    forgetting creativity and.
                                 </span>
                             </p>
 
@@ -105,12 +108,11 @@ const AboutUs = () => {
                                         Our Vision
                                     </h4>
                                     <p className="text-sm text-secondary">
-                                        To redefine how brands grow — not
-                                        through noise, but through clarity,
-                                        strategy, and systems that scale. Axcel
-                                        Promotion is here to lead that shift —
-                                        helping founders, teams, and creators
-                                        cut through the clutter.
+                                        To help Businesses with a great Product
+                                        and Customer Delivery get the
+                                        opportunity to deliver more great
+                                        experiences for other brands
+                                        consistently and sustainably.
                                     </p>
                                 </div>
                                 <div className="space-y-4.5">
@@ -121,12 +123,11 @@ const AboutUs = () => {
                                         Our Mission
                                     </h4>
                                     <p className="text-sm text-secondary">
-                                        To redefine how brands grow — not
-                                        through noise, but through clarity,
-                                        strategy, and systems that scale. Axcel
-                                        Promotion is here to lead that shift —
-                                        helping founders, teams, and creators
-                                        cut through the clutter.
+                                        Helping Executives and teams cut through
+                                        the clutter with our constantly evolving
+                                        team of experts and systems that Combine
+                                        Human Creativity with AI and Software
+                                        that scales.
                                     </p>
                                 </div>
                             </div>
@@ -136,7 +137,7 @@ const AboutUs = () => {
             </section>
 
             {/* ---------------------  Our Approach  --------------------- */}
-            <section className="container py-20 md:space-y-22.5 space-y-12.5">
+            <section className="w-contain py-20 md:space-y-22.5 space-y-12.5">
                 <SectionHeader tag="Our Approach" heading="The Axel Approach" />
 
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-7.5 gap-5">
@@ -167,7 +168,7 @@ const AboutUs = () => {
             </section>
 
             {/* ---------------------  Why Choose Us  --------------------- */}
-            <section className="container py-20 md:space-y-22.5 space-y-12.5">
+            <section className="w-contain py-20 md:space-y-22.5 space-y-12.5">
                 <SectionHeader
                     tag="Why Choose Us"
                     heading="We are the right choice"

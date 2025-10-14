@@ -10,7 +10,7 @@ interface ITestimonialsProps extends React.ComponentProps<"section"> {
 const Testimonials = ({ className, heading }: ITestimonialsProps) => {
     return (
         <section className={cn(className)}>
-            <div className="container py-20 md:space-y-25 space-y-12.5">
+            <div className="w-contain py-20 md:space-y-25 space-y-12.5">
                 <SectionHeader tag="Testimonials" heading={heading} />
 
                 <div className="flex md:flex-row flex-col gap-7.5">

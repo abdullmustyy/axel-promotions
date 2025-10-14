@@ -16,7 +16,7 @@ export default function Home() {
     return (
         <main>
             {/* ---------------------  Hero  --------------------- */}
-            <header className="container pt-5 pb-40 flex md:flex-row flex-col md:items-end md:gap-0 gap-12.5">
+            <header className="w-contain pt-5 pb-40 flex md:flex-row flex-col md:items-end md:gap-0 gap-12.5">
                 <div className="md:w-1/2 flex flex-col md:gap-18.5 gap-12.5 md:text-left text-center">
                     <div className="md:space-y-7.5 space-y-2.5">
                         <h2 className="font-poppins font-medium md:text-[4rem] text-3xl md:leading-[70px] leading-[50px]">
@@ -73,7 +73,7 @@ export default function Home() {
             <JoinBrands />
 
             {/* ---------------------  Our Benefits  --------------------- */}
-            <section className="container pt-40 pb-20 space-y-25">
+            <section className="w-contain pt-40 pb-20 space-y-25">
                 <SectionHeader
                     tag="Our Benefits"
                     heading={
@@ -134,7 +134,7 @@ export default function Home() {
             />
 
             {/* ---------------------  FAQs  --------------------- */}
-            <section className="container py-20 flex md:flex-row flex-col gap-10">
+            <section className="w-contain py-20 flex md:flex-row flex-col gap-10">
                 <div className="md:w-[35%] space-y-7.5">
                     <SectionHeader
                         tag="FAQs"

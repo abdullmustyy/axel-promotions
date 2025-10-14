@@ -25,7 +25,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="container relative">
+        <nav className="w-contain relative">
             {/* Horizontal nav */}
             <div className="h-20 flex items-center justify-between">
                 <Link href="/">

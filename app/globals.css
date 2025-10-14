@@ -155,11 +155,6 @@
   }
 }
 
-@utility container {
-  margin-inline: auto;
-  @apply md:px-0 px-4;
-}
-
 @utility hide-scrollbar {
   &::-webkit-scrollbar {
     display: none;
@@ -173,4 +168,8 @@
 
 @utility md-br {
   @apply md:inline hidden;
+}
+
+@utility w-contain {
+  @apply 2xl:max-w-350 w-9/10 mx-auto;
 }
