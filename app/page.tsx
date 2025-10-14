@@ -7,7 +7,7 @@ import Testimonials from "@/components/testimonials";
 import { buttonVariants } from "@/components/ui/button";
 import { ourBenefits } from "@/lib/data/home";
 import { cn } from "@/lib/utils";
-import HeroImg from "@/public/images/pngs/home-hero-img.png";
+import HeroImg from "@/public/images/svgs/home-hero-img.svg";
 import TakeOffImg from "@/public/images/svgs/takeoff.svg";
 import Image from "next/image";
 import Link from "next/link";
@@ -49,7 +49,7 @@ export default function Home() {
                 </div>
 
                 <div className="md:w-1/2 md:h-auto h-94.5 md:pl-25 pl-10 relative">
-                    <div className="size-full rounded-xxl md:bg-linear-0 md:from-transparent md:to-transparent bg-[url(@/public/images/pngs/home-hero-img.png),linear-gradient(180deg,rgba(219,61,10,0.8)_-48.58%,rgba(219,61,10,0)_81.42%)] bg-no-repeat bg-size-[100%_auto] bg-top">
+                    <div className="size-full rounded-xxl md:bg-linear-0 md:from-transparent md:to-transparent bg-[url(@/public/images/svgs/home-hero-img.svg),linear-gradient(180deg,rgba(219,61,10,0.8)_-48.58%,rgba(219,61,10,0)_81.42%)] bg-no-repeat bg-size-[100%_auto] bg-top">
                         <Image
                             src={HeroImg}
                             alt=""

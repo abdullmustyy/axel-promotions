@@ -5,13 +5,13 @@ import Robot from "@/components/icons/robot";
 import System from "@/components/icons/system";
 import XFlow from "@/components/icons/x-flow";
 import XTarget from "@/components/icons/x-target";
-import AdOptimization from "@/public/images/pngs/ad-optimization.png";
 import CaseStudy from "@/public/images/pngs/case-study.png";
-import ContentMarketing from "@/public/images/pngs/content-marketing.png";
-import EmailMarketing from "@/public/images/pngs/email-marketing.png";
-import MarketResearch from "@/public/images/pngs/market-research.png";
-import PaidAdvert from "@/public/images/pngs/paid-advert.png";
-import SEO from "@/public/images/pngs/seo.png";
+import AdOptimization from "@/public/images/svgs/ad-optimization.svg";
+import ContentMarketing from "@/public/images/svgs/content-marketing.svg";
+import EmailMarketing from "@/public/images/svgs/email-marketing.svg";
+import MarketResearch from "@/public/images/svgs/market-research.svg";
+import PaidAdvert from "@/public/images/svgs/paid-advert.svg";
+import SEO from "@/public/images/svgs/seo.svg";
 
 export const commonProblems = [
     { Icon: ChartColumnLow, problem: "Wasting ad spend with low conversions?" },

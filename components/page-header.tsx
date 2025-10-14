@@ -2,8 +2,8 @@
 
 import { navItems } from "@/lib/data";
 import { cn } from "@/lib/utils";
-import Metrics from "@/public/images/pngs/metrics.png";
-import Stacks from "@/public/images/pngs/stacks.png";
+import Metrics from "@/public/images/svgs/metrics.svg";
+import Stacks from "@/public/images/svgs/stacks.svg";
 import Image from "next/image";
 import { useMemo } from "react";
 import Star from "./icons/star";

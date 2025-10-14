@@ -1,8 +1,8 @@
-import Martino from "@/public/images/pngs/martino.png";
-import SquareStone from "@/public/images/pngs/square-stone.png";
-import Vertex from "@/public/images/pngs/vertex.png";
-import Virogan from "@/public/images/pngs/virogan.png";
-import Waverio from "@/public/images/pngs/waverio.png";
+import Martino from "@/public/images/svgs/martino.svg";
+import SquareStone from "@/public/images/svgs/square-stone.svg";
+import Vertex from "@/public/images/svgs/vertex.svg";
+import Virogan from "@/public/images/svgs/virogan.svg";
+import Waverio from "@/public/images/svgs/waverio.svg";
 import { INavItem } from "@/types";
 
 const serviceLinks = [
@@ -41,5 +41,3 @@ export const footerLinks = [
         links: serviceLinks,
     },
 ];
-
-

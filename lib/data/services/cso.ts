@@ -1,16 +1,16 @@
-import CaseStudy from "@/public/images/pngs/case-study.png";
-import Forecasting from "@/public/images/pngs/forecasting.png";
-import GoToMarket from "@/public/images/pngs/go-to-market.png";
-import MarketingSales from "@/public/images/pngs/marketing-sales.png";
-import SalesSystems from "@/public/images/pngs/sales-system.png";
-import TeamHiring from "@/public/images/pngs/team-hiring.png";
+import ClipboardNoAccess from "@/components/icons/clipboard-no-access";
+import LostDeals from "@/components/icons/lost-deals";
 import Members from "@/components/icons/members";
+import NoAxesChart from "@/components/icons/no-axes-chart";
+import NoCoin from "@/components/icons/no-coin";
 import Performance from "@/components/icons/performance";
 import Repeatable from "@/components/icons/repeatable";
-import NoCoin from "@/components/icons/no-coin";
-import NoAxesChart from "@/components/icons/no-axes-chart";
-import LostDeals from "@/components/icons/lost-deals";
-import ClipboardNoAccess from "@/components/icons/clipboard-no-access";
+import CaseStudy from "@/public/images/pngs/case-study.png";
+import Forecasting from "@/public/images/svgs/forecasting.svg";
+import GoToMarket from "@/public/images/svgs/go-to-market.svg";
+import MarketingSales from "@/public/images/svgs/marketing-sales.svg";
+import SalesSystems from "@/public/images/svgs/sales-system.svg";
+import TeamHiring from "@/public/images/svgs/team-hiring.svg";
 
 export const commonProblems = [
     {

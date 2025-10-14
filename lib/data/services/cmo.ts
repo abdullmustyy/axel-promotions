@@ -1,16 +1,16 @@
-import CampaignPlanning from "@/public/images/pngs/campaign-planning.png";
-import CaseStudy from "@/public/images/pngs/case-study.png";
-import MarketingAlignment from "@/public/images/pngs/marketing-allignment.png";
-import MarketingStrategy from "@/public/images/pngs/marketing-strategy.png";
-import TeamLeadership from "@/public/images/pngs/team-leadership.png";
-import VideoSales from "@/public/images/pngs/video-sales.png";
+import AccountNetworkOff from "@/components/icons/account-network-off";
+import Channels from "@/components/icons/channels";
 import Control from "@/components/icons/control";
 import Insight from "@/components/icons/insight";
-import Strategy from "@/components/icons/strategy";
-import NotAllowed from "@/components/icons/not-allowed";
-import Channels from "@/components/icons/channels";
-import AccountNetworkOff from "@/components/icons/account-network-off";
 import Nolight from "@/components/icons/nolight";
+import NotAllowed from "@/components/icons/not-allowed";
+import Strategy from "@/components/icons/strategy";
+import CaseStudy from "@/public/images/pngs/case-study.png";
+import CampaignPlanning from "@/public/images/svgs/campaign-planning.svg";
+import MarketingAlignment from "@/public/images/svgs/marketing-allignment.svg";
+import MarketingStrategy from "@/public/images/svgs/marketing-strategy.svg";
+import TeamLeadership from "@/public/images/svgs/team-leadership.svg";
+import VideoSales from "@/public/images/svgs/video-sales.svg";
 
 export const commonProblems = [
     {

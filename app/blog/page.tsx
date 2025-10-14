@@ -4,7 +4,7 @@ import PageHeader from "@/components/page-header";
 import SectionHeader from "@/components/section-header";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import APIllustration from "@/public/images/pngs/ap-illustration.png";
+import APIllustration from "@/public/images/svgs/ap-illustration.svg";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";

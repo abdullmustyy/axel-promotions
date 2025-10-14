@@ -2,7 +2,7 @@
 
 import { footerLinks } from "@/lib/data";
 import { cn } from "@/lib/utils";
-import FooterLogo from "@/public/images/pngs/footer-logo.png";
+import FooterLogo from "@/public/images/svgs/footer-logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

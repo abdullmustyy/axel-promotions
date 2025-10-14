@@ -1,17 +1,17 @@
-import AdOptimization from "@/public/images/pngs/ad-optimization.png";
-import CaseStudyLeadMagnet from "@/public/images/pngs/case-study-lead-magnet.png";
-import CaseStudy from "@/public/images/pngs/case-study.png";
-import LeadScraping from "@/public/images/pngs/lead-scraping.png";
-import PersonalizedOutreach from "@/public/images/pngs/personalized-outreach.png";
-import SalesPages from "@/public/images/pngs/sales-pages.png";
-import VideoSales from "@/public/images/pngs/video-sales.png";
 import Asset from "@/components/icons/asset";
-import Log from "@/components/icons/log";
-import SpeedPipiline from "@/components/icons/speed-pipiline";
-import Outreach from "@/components/icons/outreach";
 import Automation from "@/components/icons/automation";
-import Pointer from "@/components/icons/pointer";
+import Log from "@/components/icons/log";
+import Outreach from "@/components/icons/outreach";
 import Pipeline from "@/components/icons/pipeline";
+import Pointer from "@/components/icons/pointer";
+import SpeedPipiline from "@/components/icons/speed-pipiline";
+import CaseStudy from "@/public/images/pngs/case-study.png";
+import AdOptimization from "@/public/images/svgs/ad-optimization.svg";
+import CaseStudyLeadMagnet from "@/public/images/svgs/case-study-lead-magnet.svg";
+import LeadScraping from "@/public/images/svgs/lead-scraping.svg";
+import PersonalizedOutreach from "@/public/images/svgs/personalized-outreach.svg";
+import SalesPages from "@/public/images/svgs/sales-pages.svg";
+import VideoSales from "@/public/images/svgs/video-sales.svg";
 
 export const commonProblems = [
     {

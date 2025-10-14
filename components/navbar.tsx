@@ -2,7 +2,7 @@
 
 import { navItems } from "@/lib/data";
 import { cn } from "@/lib/utils";
-import Logo from "@/public/images/pngs/logo.png";
+import Logo from "@/public/images/svgs/logo.svg";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
