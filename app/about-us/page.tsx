@@ -176,7 +176,7 @@ const AboutUs = () => {
 
                 <div className="flex flex-col gap-11.5">
                     <div className="flex md:flex-row flex-col gap-8">
-                        <figure className="md:w-[35%]">
+                        <figure className="md:w-[35%] rounded-xl overflow-hidden">
                             <Image
                                 src={Workspace}
                                 alt=""

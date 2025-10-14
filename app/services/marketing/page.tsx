@@ -249,7 +249,7 @@ const Marketing = () => {
                     {caseStudies.map(({ description, tag, image }, index) => (
                         <div
                             key={tag + index}
-                            className="grid md:grid-rows-subgrid md:row-span-2 gap-5 p-7.5 rounded-xxl bg-snow-haze"
+                            className="grid md:grid-rows-subgrid md:row-span-2 gap-5 md:p-7.5 p-5 rounded-xxl bg-snow-haze"
                         >
                             <Image
                                 src={image}
