@@ -7,6 +7,8 @@ import Stacks from "@/public/images/svgs/stacks.svg";
 import Image from "next/image";
 import { useMemo } from "react";
 import Star from "./icons/star";
+import { Variants } from "motion/react";
+import * as motion from "motion/react-client";
 
 interface IPageHeaderProps extends React.ComponentProps<"section"> {
     page: React.ReactNode;
@@ -21,7 +23,11 @@ const PageHeader = ({ className, page }: IPageHeaderProps) => {
     }, [serviceItem]);
 
     return (
-        <section>
+        <motion.section
+            variants={headerVariants}
+            initial="hidden"
+            animate="visible"
+        >
             <div
                 className={cn(
                     "md:px-8 px-4 pt-16 md:pb-16 pb-4 flex items-center md:justify-between justify-center gap-8",
@@ -57,8 +63,20 @@ const PageHeader = ({ className, page }: IPageHeaderProps) => {
                     ))}
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
+};
+
+const headerVariants: Variants = {
+    hidden: { opacity: 0, y: -40 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        },
+    },
 };
 
 export default PageHeader;

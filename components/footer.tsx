@@ -11,12 +11,20 @@ import Facebook from "./icons/facebook";
 import Instagram from "./icons/instagram";
 import LinkedIn from "./icons/linkedin";
 import { buttonVariants } from "./ui/button";
+import { Variants } from "motion/react";
+import * as motion from "motion/react-client";
 
 const Footer = () => {
     const pathname = usePathname();
 
     return (
-        <footer className="w-contain min-h-dvh py-20 space-y-25">
+        <motion.footer
+            variants={inViewVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            className="w-contain min-h-dvh py-20 space-y-25"
+        >
             <div className="flex md:flex-row flex-col md:justify-between gap-25">
                 <div className="space-y-12.5">
                     <h3 className="font-aeonik-trial md:text-[3.125rem]/[60px] text-3xl md:text-left text-center">
@@ -81,8 +89,20 @@ const Footer = () => {
             </div>
 
             <Image src={FooterLogo} alt="" className="size-full object-cover" />
-        </footer>
+        </motion.footer>
     );
+};
+
+const inViewVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            ease: "easeOut",
+        },
+    },
 };
 
 export default Footer;

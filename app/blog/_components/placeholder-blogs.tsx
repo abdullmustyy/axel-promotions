@@ -2,13 +2,22 @@ import { placeholderBlogs } from "@/lib/data/blog";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Variants } from "motion/react";
+import * as motion from "motion/react-client";
 
 const PlaceholderBlogs = () => {
     return (
         <div className="flex flex-col md:gap-5 gap-10">
             {placeholderBlogs.map(
                 ({ date, description, heading, image, tag }, index) => (
-                    <div key={index} className="md:p-7.5 p-5 flex flex-col gap-5 bg-snow-haze rounded-xxl">
+                    <motion.div
+                        key={index}
+                        variants={inViewVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.1 }}
+                        className="md:p-7.5 p-5 flex flex-col gap-5 bg-snow-haze rounded-xxl"
+                    >
                         <div className="md:h-100 h-62.5 w-full rounded-2xl overflow-hidden">
                             <Image
                                 src={image}
@@ -42,11 +51,23 @@ const PlaceholderBlogs = () => {
                                 <ArrowUpRight className="md:size-6 size-4.5" />
                             </Link>
                         </div>
-                    </div>
+                    </motion.div>
                 ),
             )}
         </div>
     );
+};
+
+const inViewVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            ease: "easeOut",
+        },
+    },
 };
 
 export default PlaceholderBlogs;

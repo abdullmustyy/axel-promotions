@@ -2,11 +2,14 @@ import PageHeader from "@/components/page-header";
 import SectionHeader from "@/components/section-header";
 import { buttonVariants } from "@/components/ui/button";
 import { caseStudies } from "@/lib/data/case-studies";
+import { MotionImage } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import CaseStudyPlaceholder from "@/public/images/pngs/case-study-placeholder.png";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Variants } from "motion/react";
+import * as motion from "motion/react-client";
 
 const CaseStudy = () => {
     return (
@@ -14,16 +17,23 @@ const CaseStudy = () => {
             {/* ---------------------  Header  --------------------- */}
             <PageHeader page="Details" />
 
-            <section className="w-contain pt-8 pb-20 flex flex-col gap-8">
-                <div className="md:h-156 h-62.5 w-full rounded-2xl overflow-hidden">
-                    <Image
-                        src={CaseStudyPlaceholder}
-                        alt=""
-                        className="size-full object-cover"
-                    />
-                </div>
+            <motion.section
+                variants={heroContainerVariants}
+                initial="hidden"
+                animate="visible"
+                className="w-contain pt-8 pb-20 flex flex-col gap-8"
+            >
+                <MotionImage
+                    variants={heroItemVariants}
+                    src={CaseStudyPlaceholder}
+                    alt=""
+                    className="md:h-156 h-62.5 w-full rounded-2xl overflow-hidden object-cover"
+                />
 
-                <div className="flex md:flex-row flex-col-reverse md:items-start gap-7.5">
+                <motion.div
+                    variants={heroItemVariants}
+                    className="flex md:flex-row flex-col-reverse md:items-start gap-7.5"
+                >
                     <div className="flex-1 space-y-6">
                         <h3 className="md:text-[2.5rem] text-xl font-medium leading-[100%]">
                             300 SQLs in 45 Days
@@ -89,9 +99,9 @@ const CaseStudy = () => {
                             </span>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="space-y-6">
+                <motion.div variants={heroItemVariants} className="space-y-6">
                     <h3 className="md:text-[2.5rem] text-xl font-medium leading-[100%]">
                         The Challenge
                     </h3>
@@ -128,9 +138,9 @@ const CaseStudy = () => {
                             queries.
                         </p>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="space-y-6">
+                <motion.div variants={heroItemVariants} className="space-y-6">
                     <h3 className="md:text-[2.5rem] text-xl font-medium leading-[100%]">
                         The Approach
                     </h3>
@@ -194,10 +204,16 @@ const CaseStudy = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
-            </section>
+                </motion.div>
+            </motion.section>
 
-            <section className="w-contain py-20 flex flex-col md:gap-15 gap-12.5">
+            <motion.section
+                variants={inViewVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                className="w-contain py-20 flex flex-col md:gap-15 gap-12.5"
+            >
                 <SectionHeader
                     tag="Our Case study"
                     heading="See more of our work"
@@ -251,9 +267,42 @@ const CaseStudy = () => {
                 >
                     Let&apos;s Build Your Case Study Next
                 </Link>
-            </section>
+            </motion.section>
         </main>
     );
+};
+
+const heroContainerVariants: Variants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const heroItemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        },
+    },
+};
+
+const inViewVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            ease: "easeOut",
+        },
+    },
 };
 
 export default CaseStudy;

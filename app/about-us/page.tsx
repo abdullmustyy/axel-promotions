@@ -2,10 +2,13 @@ import PageHeader from "@/components/page-header";
 import SectionHeader from "@/components/section-header";
 import { buttonVariants } from "@/components/ui/button";
 import { ourApproach, whyChooseUs } from "@/lib/data/about-us";
+import { MotionImage } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import AboutHeroImg from "@/public/images/pngs/about-hero-img.png";
 import Workspace from "@/public/images/pngs/workspace.png";
 import { Eye, Rocket } from "lucide-react";
+import { Variants } from "motion/react";
+import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -46,24 +49,34 @@ const AboutUs = () => {
 
             {/* ---------------------  Hero  --------------------- */}
             <section className="pt-25 pb-20 md:bg-[url('@/public/images/pngs/wavy-vector-hero.png')] bg-[url('@/public/images/pngs/wavy-vector-hero-mobile.png')] bg-no-repeat bg-size-[100%_100%] bg-center">
-                <div className="w-contain md:space-y-22.5 space-y-12.5">
-                    <SectionHeader
-                        tag="About Us"
-                        heading={
-                            <span>
-                                More Than a Team, we are
-                                <br className="md-br" /> Your{" "}
-                                <span className="relative font-luxurious-script font-normal md:text-[5.5rem] text-[3.125rem] text-[#F58B3B] md:before:inline-block before:hidden before:content-[url(@/public/images/pngs/wavy-vector-about.png)] before:absolute before:-bottom-6">
-                                    Growth Partners
+                <motion.div
+                    variants={heroContainerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="w-contain md:space-y-22.5 space-y-12.5"
+                >
+                    <motion.div variants={heroItemVariants}>
+                        <SectionHeader
+                            tag="About Us"
+                            heading={
+                                <span>
+                                    More Than a Team, we are
+                                    <br className="md-br" /> Your{" "}
+                                    <span className="relative font-luxurious-script font-normal md:text-[5.5rem] text-[3.125rem] text-[#F58B3B] md:before:inline-block before:hidden before:content-[url(@/public/images/pngs/wavy-vector-about.png)] before:absolute before:-bottom-6">
+                                        Growth Partners
+                                    </span>
                                 </span>
-                            </span>
-                        }
-                        className="[&_[data-slot='heading']]:md:text-[3.5rem]"
-                    />
+                            }
+                            className="[&_[data-slot='heading']]:md:text-[3.5rem]"
+                        />
+                    </motion.div>
 
-                    <div className="grid lg:grid-cols-5 gap-8 itemscenter">
+                    <motion.div
+                        variants={heroItemVariants}
+                        className="grid lg:grid-cols-5 gap-8 itemscenter"
+                    >
                         <div className="md:col-span-2 rounded-[18.33px] overflow-hidden">
-                            <Image
+                            <MotionImage
                                 src={AboutHeroImg}
                                 alt=""
                                 className="size-full object-cover"
@@ -132,12 +145,18 @@ const AboutUs = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </section>
 
             {/* ---------------------  Our Approach  --------------------- */}
-            <section className="w-contain py-20 md:space-y-22.5 space-y-12.5">
+            <motion.section
+                variants={inViewVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                className="w-contain py-20 md:space-y-22.5 space-y-12.5"
+            >
                 <SectionHeader tag="Our Approach" heading="The Axel Approach" />
 
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 md:gap-7.5 gap-5">
@@ -165,10 +184,16 @@ const AboutUs = () => {
                         ),
                     )}
                 </div>
-            </section>
+            </motion.section>
 
             {/* ---------------------  Why Choose Us  --------------------- */}
-            <section className="w-contain py-20 md:space-y-22.5 space-y-12.5">
+            <motion.section
+                variants={inViewVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                className="w-contain py-20 md:space-y-22.5 space-y-12.5"
+            >
                 <SectionHeader
                     tag="Why Choose Us"
                     heading="We are the right choice"
@@ -238,9 +263,42 @@ const AboutUs = () => {
                         Meet with Axel Promotions
                     </Link>
                 </div>
-            </section>
+            </motion.section>
         </main>
     );
+};
+
+const heroContainerVariants: Variants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const heroItemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        },
+    },
+};
+
+const inViewVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            ease: "easeOut",
+        },
+    },
 };
 
 export default AboutUs;

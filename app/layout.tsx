@@ -1,5 +1,7 @@
+import Footer from "@/components/footer";
 import Navbar from "@/components/navbar";
 import Newsletter from "@/components/newsletter";
+import SmoothScroll from "@/components/smooth-scroll";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import {
@@ -10,7 +12,6 @@ import {
     urbanist,
 } from "./fonts";
 import "./globals.css";
-import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
     title: "Axel Promotions",
@@ -23,21 +24,23 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body
-                className={cn(
-                    aeonikTrial.variable,
-                    inter.variable,
-                    luxuriousScript.variable,
-                    poppins.variable,
-                    urbanist.variable,
-                )}
-            >
-                <Navbar />
-                {children}
-                <Newsletter />
-                <Footer />
-            </body>
-        </html>
+        <SmoothScroll>
+            <html lang="en">
+                <body
+                    className={cn(
+                        aeonikTrial.variable,
+                        inter.variable,
+                        luxuriousScript.variable,
+                        poppins.variable,
+                        urbanist.variable,
+                    )}
+                >
+                    <Navbar />
+                    {children}
+                    <Newsletter />
+                    <Footer />
+                </body>
+            </html>
+        </SmoothScroll>
     );
 }

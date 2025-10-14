@@ -8,10 +8,13 @@ import {
     ourBenefits,
     solutionsAndDeliverables,
 } from "@/lib/data/services/cso";
+import { MotionImage, MotionLink } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import VideoPlaceholderMobile from "@/public/images/pngs/video-placeholder-mobile.png";
 import VideoPlaceholder from "@/public/images/pngs/video-placeholder.png";
 import ArrowVector from "@/public/images/svgs/arrow-vector.svg";
+import { Variants } from "motion/react";
+import * as motion from "motion/react-client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -20,51 +23,61 @@ const CSO = () => {
         <>
             {/* ---------------------  Hero  --------------------- */}
             <section className="py-25 md:bg-[url('@/public/images/pngs/wavy-vector-hero.png')] bg-[url('@/public/images/pngs/wavy-vector-hero-mobile.png')] bg-no-repeat bg-size-[100%_100%] bg-center">
-                <div className="w-contain flex flex-col gap-12.5">
-                    <SectionHeader
-                        tag="Our Services"
-                        heading={
-                            <span>
-                                Fractional CSO Services That Build
-                                <br className="md-br" />
-                                <span className="font-luxurious-script font-normal md:text-8xl text-[3.125rem] text-[#F58B3B]">
-                                    Pipeline, Teams,
-                                </span>{" "}
-                                and{" "}
-                                <span className="font-luxurious-script font-normal md:text-8xl text-[3.125rem] text-[#F58B3B]">
-                                    Revenue Systems
+                <motion.div
+                    variants={heroContainerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="w-contain flex flex-col gap-12.5"
+                >
+                    <motion.div variants={heroItemVariants}>
+                        <SectionHeader
+                            tag="Our Services"
+                            heading={
+                                <span>
+                                    Fractional CSO Services That Build
+                                    <br className="md-br" />
+                                    <span className="font-luxurious-script font-normal md:text-8xl text-[3.125rem] text-[#F58B3B]">
+                                        Pipeline, Teams,
+                                    </span>{" "}
+                                    and{" "}
+                                    <span className="font-luxurious-script font-normal md:text-8xl text-[3.125rem] text-[#F58B3B]">
+                                        Revenue Systems
+                                    </span>
                                 </span>
-                            </span>
-                        }
-                        className="[&_[data-slot='heading']]:md:text-6xl gap-5 relative"
-                    >
-                        <p className="font-poppins md:text-3xl text-accent text-center">
-                            Get senior-level sales leadership to scale your
-                            go-to-
-                            <br className="md-br" />
-                            market operation without full-time commitment.
-                        </p>
+                            }
+                            className="[&_[data-slot='heading']]:md:text-6xl gap-5 relative"
+                        >
+                            <p className="font-poppins md:text-3xl text-accent text-center">
+                                Get senior-level sales leadership to scale your
+                                go-to-
+                                <br className="md-br" />
+                                market operation without full-time commitment.
+                            </p>
 
-                        <div className="md:flex flex-col items-center gap-2 hidden absolute bottom-0 right-0">
-                            <span className="text-xl text-primary">
-                                Words from us
-                            </span>
-                            <Image src={ArrowVector} alt="" className="" />
-                        </div>
-                    </SectionHeader>
+                            <div className="md:flex flex-col items-center gap-2 hidden absolute bottom-0 right-0">
+                                <span className="text-xl text-primary">
+                                    Words from us
+                                </span>
+                                <Image src={ArrowVector} alt="" className="" />
+                            </div>
+                        </SectionHeader>
+                    </motion.div>
 
-                    <Image
+                    <MotionImage
+                        variants={heroItemVariants}
                         src={VideoPlaceholder}
                         alt=""
                         className="md:block hidden size-full"
                     />
-                    <Image
+                    <MotionImage
+                        variants={heroItemVariants}
                         src={VideoPlaceholderMobile}
                         alt=""
                         className="block md:hidden"
                     />
 
-                    <Link
+                    <MotionLink
+                        variants={heroItemVariants}
                         href="/contact"
                         className={cn(
                             buttonVariants({ size: "lg" }),
@@ -72,15 +85,28 @@ const CSO = () => {
                         )}
                     >
                         Book a CSO Discovery Call
-                    </Link>
-                </div>
+                    </MotionLink>
+                </motion.div>
             </section>
 
             {/* ---------------------  Join the brands  --------------------- */}
-            <JoinBrands />
+            <motion.div
+                variants={inViewVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+            >
+                <JoinBrands />
+            </motion.div>
 
             {/* ---------------------  Common Problems  --------------------- */}
-            <section className="w-contain flex flex-col md:gap-25 gap-12.5 pt-30 pb-20">
+            <motion.section
+                variants={inViewVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                className="w-contain flex flex-col md:gap-25 gap-12.5 pt-30 pb-20"
+            >
                 <SectionHeader
                     tag="Common Problems"
                     heading={
@@ -119,10 +145,16 @@ const CSO = () => {
                 >
                     Talk to a sales strategist
                 </Link>
-            </section>
+            </motion.section>
 
             {/* ---------------------  Solutions & Delieverables  --------------------- */}
-            <section className="w-contain flex flex-col gap-12.5 py-20">
+            <motion.section
+                variants={inViewVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                className="w-contain flex flex-col gap-12.5 py-20"
+            >
                 <SectionHeader
                     tag="Solutions & Delieverables"
                     heading={
@@ -181,10 +213,16 @@ const CSO = () => {
                         ),
                     )}
                 </div>
-            </section>
+            </motion.section>
 
             {/* ---------------------  Our Benefits  --------------------- */}
-            <section className="py-20 bg-[url('@/public/images/pngs/vector-48.png')] bg-no-repeat md:bg-size-[100%_100%] md:bg-center">
+            <motion.section
+                variants={inViewVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                className="py-20 bg-[url('@/public/images/pngs/vector-48.png')] bg-no-repeat md:bg-size-[100%_100%] md:bg-center"
+            >
                 <div className="w-contain flex flex-col gap-25">
                     <SectionHeader
                         tag="Our Benefits"
@@ -233,10 +271,16 @@ const CSO = () => {
                         Get started today
                     </Link>
                 </div>
-            </section>
+            </motion.section>
 
             {/* ---------------------  Our Portfolio  --------------------- */}
-            <section className="w-contain flex flex-col gap-12.5 py-20">
+            <motion.section
+                variants={inViewVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                className="w-contain flex flex-col gap-12.5 py-20"
+            >
                 <SectionHeader
                     tag="Our Portfolio"
                     heading={
@@ -280,21 +324,61 @@ const CSO = () => {
                 >
                     Explore Sales Case Studies
                 </Link>
-            </section>
+            </motion.section>
 
             {/* ---------------------  Testimonials  --------------------- */}
-            <Testimonials
-                heading={
-                    <span>
-                        Real results, Real partners. <br className="md-br" />
-                        <span className="relative md:inline-flex justify-center md:before:inline-block before:hidden before:content-[url(@/public/images/pngs/wavy-vector-18.png)] before:absolute before:-bottom-12">
-                            Trusted by our clients
+            <motion.div
+                variants={inViewVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+            >
+                <Testimonials
+                    heading={
+                        <span>
+                            Real results, Real partners. <br className="md-br" />
+                            <span className="relative md:inline-flex justify-center md:before:inline-block before:hidden before:content-[url(@/public/images/pngs/wavy-vector-18.png)] before:absolute before:-bottom-12">
+                                Trusted by our clients
+                            </span>
                         </span>
-                    </span>
-                }
-            />
+                    }
+                />
+            </motion.div>
         </>
     );
+};
+
+const heroContainerVariants: Variants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const heroItemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        },
+    },
+};
+
+const inViewVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            ease: "easeOut",
+        },
+    },
 };
 
 export default CSO;

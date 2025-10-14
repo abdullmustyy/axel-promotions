@@ -8,6 +8,8 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Variants } from "motion/react";
+import * as motion from "motion/react-client";
 
 const CaseStudies = () => {
     return (
@@ -23,7 +25,13 @@ const CaseStudies = () => {
             />
 
             {/* ---------------------  Our Case study  --------------------- */}
-            <section className="w-contain py-20 flex flex-col md:gap-15 gap-12.5">
+            <motion.section
+                variants={inViewVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+                className="w-contain py-20 flex flex-col md:gap-15 gap-12.5"
+            >
                 <SectionHeader
                     tag="Our Case study"
                     heading={
@@ -82,22 +90,41 @@ const CaseStudies = () => {
                 >
                     Let&apos;s Build Your Case Study Next
                 </Link>
-            </section>
+            </motion.section>
 
             {/* ---------------------  Testimonials  --------------------- */}
-            <Testimonials
-                heading={
-                    <span>
-                        Real results, Real partners. <br className="md-br" />
-                        <span className="relative md:inline-flex justify-center md:before:inline-block before:hidden before:content-[url(@/public/images/pngs/wavy-vector-18.png)] before:absolute before:-bottom-12">
-                            Trusted by our clients
+            <motion.div
+                variants={inViewVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.1 }}
+            >
+                <Testimonials
+                    heading={
+                        <span>
+                            Real results, Real partners. <br className="md-br" />
+                            <span className="relative md:inline-flex justify-center md:before:inline-block before:hidden before:content-[url(@/public/images/pngs/wavy-vector-18.png)] before:absolute before:-bottom-12">
+                                Trusted by our clients
+                            </span>
                         </span>
-                    </span>
-                }
-                className="md:bg-[url('@/public/images/pngs/wavy-vector-testimonial.png')] bg-[url('@/public/images/pngs/wavy-vector-testimonial-mobile.png')] bg-no-repeat md:bg-auto bg-size-[100%_80%] md:bg-bottom bg-center"
-            />
+                    }
+                    className="md:bg-[url('@/public/images/pngs/wavy-vector-testimonial.png')] bg-[url('@/public/images/pngs/wavy-vector-testimonial-mobile.png')] bg-no-repeat md:bg-auto bg-size-[100%_80%] md:bg-bottom bg-center"
+                />
+            </motion.div>
         </main>
     );
+};
+
+const inViewVariants: Variants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            ease: "easeOut",
+        },
+    },
 };
 
 export default CaseStudies;

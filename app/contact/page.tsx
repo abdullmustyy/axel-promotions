@@ -8,6 +8,8 @@ import { Form } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Variants } from "motion/react";
+import * as motion from "motion/react-client";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -44,8 +46,16 @@ const Contact = () => {
     }
 
     return (
-        <main className="md:py-25 py-15 lg:px-0 px-4 flex flex-col items-center xl:gap-10 md:gap-5 gap-15 md:bg-[url('@/public/images/pngs/contact-bg.png')] bg-no-repeat bg-top bg-size-[100%_auto]">
-            <div className="md:space-y-7.5 space-y-2 text-center">
+        <motion.main
+            variants={heroContainerVariants}
+            initial="hidden"
+            animate="visible"
+            className="md:py-25 py-15 lg:px-0 px-4 flex flex-col items-center xl:gap-10 md:gap-5 gap-15 md:bg-[url('@/public/images/pngs/contact-bg.png')] bg-no-repeat bg-top bg-size-[100%_auto]"
+        >
+            <motion.div
+                variants={heroItemVariants}
+                className="md:space-y-7.5 space-y-2 text-center"
+            >
                 <div className="md:hidden flex items-center justify-center gap-2 text-primary mb-4">
                     <Star className="size-5" />
                     <span className="text-base">Contact Us</span>
@@ -61,7 +71,7 @@ const Contact = () => {
                     difficulties, please do not hesitate to
                     <br className="md-br" /> contact us
                 </p>
-            </div>
+            </motion.div>
 
             <Form {...form}>
                 <form
@@ -153,8 +163,29 @@ const Contact = () => {
                     </Button>
                 </form>
             </Form>
-        </main>
+        </motion.main>
     );
+};
+
+const heroContainerVariants: Variants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.2,
+        },
+    },
+};
+
+const heroItemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: "easeOut",
+        },
+    },
 };
 
 export default Contact;

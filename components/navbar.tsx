@@ -1,9 +1,11 @@
 "use client";
 
 import { navItems } from "@/lib/data";
+import { MotionLink } from "@/lib/motion";
 import { cn } from "@/lib/utils";
 import Logo from "@/public/images/svgs/logo.svg";
 import { ChevronDown } from "lucide-react";
+import { motion, Variants } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -25,22 +27,27 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="w-contain relative">
+        <motion.nav
+            variants={navVariants}
+            initial="hidden"
+            animate="visible"
+            className="w-contain relative"
+        >
             {/* Horizontal nav */}
             <div className="h-20 flex items-center justify-between">
-                <Link href="/">
+                <MotionLink href="/">
                     <Image
                         src={Logo}
                         alt=""
                         className="size-full object-cover"
                     />
-                </Link>
+                </MotionLink>
 
                 <ul className="md:flex hidden items-center gap-15">
                     {navItems.map((item, index) => (
                         <li key={item.name + index} className="group relative">
                             {item.type === "link" ? (
-                                <Link
+                                <MotionLink
                                     href={item.href}
                                     className={cn(
                                         "hover:text-primary  transition-all duration-300",
@@ -51,7 +58,7 @@ const Navbar = () => {
                                     )}
                                 >
                                     {item.name}
-                                </Link>
+                                </MotionLink>
                             ) : (
                                 <>
                                     <div className="flex items-center gap-0.5">
@@ -209,8 +216,20 @@ const Navbar = () => {
                     ))}
                 </ul>
             </div>
-        </nav>
+        </motion.nav>
     );
 };
 
 export default Navbar;
+
+const navVariants: Variants = {
+    hidden: { opacity: 0, y: "-100%" },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 1,
+            ease: "easeInOut",
+        },
+    },
+};
